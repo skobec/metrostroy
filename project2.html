@@ -1178,15 +1178,15 @@
                             <option disabled selected class="placeholder" value="">Заказчик</option>
                             <option value="0">Спецпроектмонтаж</option>
                             <option value="1">САФ-1</option>
-                            <option>ПСУ</option>
-                            <option>МонолитСтрой</option>
-                            <option>Техстройресурс</option>
-                            <option>СтройСервис</option>
-                            <option>Ремстройсервис</option>
-                            <option>САФ-2</option>
-                            <option>СитиСтрой</option>
-                            <option>Татстрой</option>
-                            <option>Татстройинвест</option>
+                            <option value="2">ПСУ</option>
+                            <option value="3">МонолитСтрой</option>
+                            <option value="4">Техстройресурс</option>
+                            <option value="5">СтройСервис</option>
+                            <option value="6">Ремстройсервис</option>
+                            <option value="7">САФ-2</option>
+                            <option value="8">СитиСтрой</option>
+                            <option value="9">Татстрой</option>
+                            <option value="10">Татстройинвест</option>
                         </select>
                     </div>
                 </div>
@@ -1885,8 +1885,17 @@
         });
 //        $('#btn add_project ')
         var firmList = {
-            '0':{name:'Вася', contacts:'777-777'},
-            '1':{name:'Кузя', contacts:'111-111'}
+            '0':{name:'', contacts:''},
+            '1':{name:'Махонин А.М.', contacts:'+7917783333'},
+            '2':{name:'Антонов А.С.', contacts:''},
+            '3':{name:'Исхаков Р.К.', contacts:'iskhakov@monstroy.ru'},
+            '4':{name:'Имамов А.И.', contacts:'amir1513@yandex.ru'},
+            '5':{name:'Калимуллин Р.Г.', contacts:'kalimullin@mail.ru'},
+            '6':{name:'Садыков Р.Р.', contacts:'+7 906333-44-44'},
+            '7':{name:'Комарова О.Ф', contacts:'+7 904215-16-17'},
+            '8':{name:'Нигматуллин А.А.', contacts:'+7 (843)221-72-95'},
+            '9':{name:'Хамитов Д.В.', contacts:''},
+            '10':{name:'Бикмуллин Р.Р.', contacts:'tatinvest2015@yandex.ru'}
         };
         $('#AddRequest_selectFirm').on('change',function(){
             var id = +$(this).val();
