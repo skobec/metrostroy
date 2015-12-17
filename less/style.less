@@ -1400,25 +1400,37 @@ tr.alarm_row {
 .record_table tr th span {
   text-align: left;
 }
+.record_table {
+  tbody {
+    tr {
+      span {
+        background-color: #dddddd;
+      }
+      input {
+        height: 25px;
+      }
+    }
+  }
+}
 .btn_postaw.btn_close {
-  background-color: #ACD086;
+  background-color: #d4fdac;
   opacity: 1;
   display: inline-block;
   color: #8AAA68;
   &:hover,&:active {
-    background-color: #d4fdac;
+    background-color: #4D6236;
   }
 }
 .btn_postaw {
-  background-color: #4D6236;
+  background-color: #dddddd;
   border: 0;
   border-radius: 2px;
   padding: 3px;
-  margin: -3px;
   color: #ffffff;
   font-size: 11px;
-  height: 25px;
+  height: 24px;
   width: 100%;
+  margin-bottom: 0px;
 }
 tr.highlight_row:nth-child(3) {
   td {
@@ -1435,4 +1447,15 @@ tr.highlight_row:nth-child(3) {
 }
 .btn_postaw {
 
+}
+.table_titlesss {
+  tbody {
+    tr {
+      span {
+        margin: 0;
+        max-height: 28px;
+        height: 28px;
+      }
+    }
+  }
 }
