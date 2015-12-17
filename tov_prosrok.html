@@ -100,7 +100,7 @@
                                 <tr class="alarm_row">
                                     <!--<th scope="row">2</th>-->
                                     <td><span>Цемент м-300</span></td>
-                                    <td><span>10 м3</span></td>
+                                    <td><span>102 м3</span></td>
                                     <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
                                 </tr>
                                 <tr>
@@ -116,7 +116,7 @@
                                 <tbody>
                                 <tr>
                                     <td style="    width: 137px;">
-                                        <select style="width: 99%:color:#000;" id="t1">
+                                        <select style="width: 99%;" id="t1">
                                             <option value="" disabled selected class="placeholder">Выберите из списка</option>
 
                                             <option>Бетон марка 200</option>
@@ -627,7 +627,7 @@
                                     </td>
                                     <td style="width: 41px;padding: 0 5px">
                                         <input type="text" id="t2" class="form-control" style="float: left;    display: inline-block;    width: 45%;    margin-top: 0;" placeholder="Кол-во">
-                                        <select style="width: 49%;padding: 0;color:#000;" id="t3">
+                                        <select style="width: 49%;padding: 0" id="t3">
                                             <option disabled selected class="placeholder">Ед. изм</option>
                                             <option value="1">м3</option>
                                             <option value="2">комплект</option>
@@ -791,6 +791,9 @@
     $(document).ready(function() {
 
         $('#t1').on('change',function(){
+//            if($(this).val() !== ""){
+//
+//            }
             var selectedVal = Number($(this).val());
             if(selectedVal){
                 $('#t3').val(selectedVal);
