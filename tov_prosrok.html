@@ -628,7 +628,7 @@
                                     <td style="width: 41px;padding: 0 5px">
                                         <input type="text" id="t2" class="form-control" style="float: left;    display: inline-block;    width: 45%;    margin-top: 0;" placeholder="Кол-во">
                                         <select style="width: 49%;padding: 0" id="t3">
-                                            <option disabled selected class="placeholder">Ед. изм</option>
+                                            <option disabled selected class="placeholder" value="">Ед. изм</option>
                                             <option value="1">м3</option>
                                             <option value="2">комплект</option>
                                             <option value="3">шт</option>
@@ -782,20 +782,16 @@
     $('.add_btn').click(function() {
         if($('#t1 option:selected').val() !== "") {
             addRowToTable3($('#table_add_plans'), $('#t1 option:selected').text(), $('#t2').val(), $('#t3 option:selected').text());
-
-        $('#t1,#t2,#t3').val('');
-        $('#t1,#t2').addClass('placeholder');
+            $('#t1,#t2,#t3').val("");
+            $('#t1,#t2').addClass('placeholder');
         }
     });
 
     $(document).ready(function() {
-
         $('#t1').on('change',function(){
-//            if($(this).val() !== ""){
-//
-//            }
             var selectedVal = Number($(this).val());
             if(selectedVal){
+                $("#t3").removeClass('placeholder');
                 $('#t3').val(selectedVal);
             }
         });

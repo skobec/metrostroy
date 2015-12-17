@@ -988,7 +988,7 @@
                         <td style="width: 172px">
                             <input class="form-control" placeholder="Кол-во" style="width: 50%;display: inline-block" id="t2">
                             <select style="width: 45%" id="t3">
-                                <option disabled selected class="placeholder">Ед. изм</option>
+                                <option disabled selected class="placeholder" value="">Ед. изм</option>
                                 <option value="1">м3</option>
                                 <option value="2">комплект</option>
                                 <option value="3">шт</option>
@@ -1242,6 +1242,7 @@
         $('#t1').on('change', function() {
             var selectedVal = Number($(this).val());
             if (selectedVal) {
+                $("#t3").removeClass('placeholder');
                 $('#t3').val(selectedVal);
             }
         });
