@@ -1356,3 +1356,6 @@ tr.highlight_row:nth-child(3) td button {
   max-height: 28px;
   height: 28px;
 }
+.post_select_ed {
+  text-decoration: underline!important;
+}
