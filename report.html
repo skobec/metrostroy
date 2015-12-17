@@ -152,7 +152,7 @@
 
                         <div class="col-xs-10 bl_title_head_diagr">
                             <span>Динамика обработки заявок </span>
-                            <!--<span class="title_bl_diagr" data-title-id="1"></span>-->
+                            <span class="title_bl_diagr without-text" data-title-id="1"></span>
                             <span>с </span>
                             <span class="date_from_bl_diagr">01.11-2015</span>
                             <span> по </span>
@@ -188,18 +188,19 @@
                                 <div class="row content_editgraf_bl">
                                     <div class="col-xs-12">
                                         <div class="col-xs-12">
-                                            <select class="select_zayav">
-                                                <option value="" disabled selected>Выберите проект
-                                                </option>
-                                                <option value="1">Проект № 34511-1 МКД 7.2</option>
-                                                <option value="2">Проект № 34512-1 Ф0.2</option>
-                                                <option value="3">Проект № 34513-1 АГЗС9</option>
-                                                <option value="4">Проект № 34511-1 Ф08</option>
-                                                <!--<option value="5">Проект № 34510-1 Ф07</option>-->
-                                                <!--<option value="6">Проект № 56113-1 КАВ 62</option>-->
-                                                <!--<option value="7">Проект № 56263-2 ЕАВ 62</option>-->
-                                                <!--<option value="8">Проект № 11514-1 МКД 150.1</option>-->
-                                                <!--<option value="9">Проект № 41387-1 ТРФ 1</option>-->
+                                            <select class="select_zayav" data-zakazchik="1">
+                                                <option value="" disabled selected>Заказчик</option>
+                                                <option value="1">Спецпроектмонтаж</option>
+                                                <option value="2">САФ-1</option>
+                                                <option value="3">ПСУ</option>
+                                                <option value="4">МонолитСтрой</option>
+                                                <!--<option value="5">Техстройресурс</option>-->
+                                                <!--<option value="6">СтройСервис</option>-->
+                                                <!--<option value="7">Ремстройсервис</option>-->
+                                                <!--<option value="8">САФ-2</option>-->
+                                                <!--<option value="9">СитиСтрой</option>-->
+                                                <!--<option value="10">Татстрой</option>-->
+                                                <!--<option value="11">Татстройинвест</option>-->
                                             </select>
                                         </div>
                                     </div>
@@ -776,7 +777,8 @@
                         $img = $parent.find('img'),
                         imgId = $img.data('img-id');
 
-                $parent.find('.bl_title_head_diagr').find('.title_bl_diagr').data('title-id', idTitle).html(title);
+                $parent.find('.bl_title_head_diagr').find('.title_bl_diagr').data('title-id', idTitle);
+                $parent.find('.bl_title_head_diagr').find('.title_bl_diagr').not('.without-text').html(title);
                 $parent.find('.date_from_bl_diagr').html(date_from);
                 $parent.find('.date_to_bl_diagr').html(date_to);
 
