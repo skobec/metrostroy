@@ -1312,6 +1312,9 @@ tr.alarm_row td span .btn_del_zap {
 .record_table tr th span {
   text-align: left;
 }
+.record_table tbody tr {
+  cursor: default;
+}
 .record_table tbody tr span {
   background-color: #dddddd;
 }
