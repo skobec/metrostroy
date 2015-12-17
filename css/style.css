@@ -625,11 +625,11 @@ p.ps1 {
   font-size: 10px;
   background-color: #d1deec;
   display: block;
-  padding: 5px 10px;
+  padding: 6px 10px;
   max-height: 27px;
-  height: 27px;
+  height: 24px;
   position: relative;
-  margin: 4px 0;
+  margin: 6px 0;
 }
 .table_plans tbody td span:after {
   content: "";
@@ -1316,18 +1316,29 @@ tr.alarm_row td span .btn_del_zap {
   background-color: #ACD086;
   opacity: 1;
   display: inline-block;
+  color: #8AAA68;
+}
+.btn_postaw.btn_close:hover,
+.btn_postaw.btn_close:active {
+  background-color: #d4fdac;
 }
 .btn_postaw {
-  background-color: gray;
-  opacity: 0;
+  background-color: #4D6236;
   border: 0;
   border-radius: 2px;
   padding: 3px;
   margin: -3px;
-  color: #5E7645;
-  display: none;
+  color: #ffffff;
+  font-size: 11px;
+  height: 25px;
+  width: 100%;
 }
-.btn_postaw:hover,
-.btn_postaw:active {
-  background-color: #d4fdac;
+tr.highlight_row:nth-child(3) td span {
+  background-color: tomato;
+}
+tr.highlight_row:nth-child(3) td button {
+  background-color: #F4B7AC;
+  opacity: 1;
+  display: inline-block;
+  color: #000000;
 }
