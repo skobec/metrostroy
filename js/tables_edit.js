@@ -25,7 +25,10 @@ $(document).ready(function() {
     //    return false;
     //});
     $(document).on('click', 'a.btn_del_zap', function () {
-        $(this).closest('tr').fadeOut(300, function(){ });
+        if($(this).closest('tr').hasClass('alarm_row')){
+            $('#AddRequest_msg').hide();
+        }
+        $(this).closest('tr').fadeOut(300, function(){ }).remove();
         return false;
     });
     var addClass = function(el, className) {

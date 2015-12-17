@@ -1232,9 +1232,11 @@
 <script src="js/tables_edit.js"></script>
 <script>
     $('.add_btn').click(function() {
-        addRowToTable($('#table_add_plans'), $('#t1').val(), $('#t2').val(),$('#t3').val(), $('#t4').val());
-        $('#t1,#t2,#t3,#t4').val('');
-        $('#t1,#t3').addClass('placeholder');
+        if ($('#t1 option:selected').val() !== "") {
+            addRowToTable($('#table_add_plans'), $('#t1 option:selected').text(), $('#t2').val(), $('#t3 option:selected').text(), $('#t4').val());
+            $('#t1,#t2,#t3,#t4').val('');
+            $('#t1,#t3').addClass('placeholder');
+        }
     });
     $(document).ready(function() {
         $('#t1').on('change', function() {

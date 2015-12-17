@@ -1262,7 +1262,7 @@
                     <tbody>
                      <tr>
                         <td style="width: 390px;">
-                            <select style="width: 100%" id="t1">
+                            <select style="width: 100%; color:#000;" id="t1">
                                 <!--<option value="1">м3</option>-->
                                 <!--<option value="2">комплект</option>-->
                                 <!--<option value="3">шт</option>-->
@@ -1277,9 +1277,9 @@
                                 <!--<option value="12">пог. м</option>-->
                                 <!--<option value="13">м. п.</option>-->
 
-                                <option value="" disabled selected class="placeholder">Выберите из списка</option>
-                                <option value="1">Бетон марка 200</option>
-                                <option value="3">Винтовая свая СВС 108 L=3500 мм</option>
+                                <option value="" selected class="placeholder">Выберите из списка</option>
+                                <option value="1" data-id="test">Бетон марка 200</option>
+                                <option value="3" data-id="test2">Винтовая свая СВС 108 L=3500 мм</option>
                                 <option value="3">Винтовая свая СВС 108 L=3000 мм</option>
                                 <option value="3">Винтовая свая СВС 108 L=2500 мм</option>
                                 <option value="8">Узел примыкания кровли к трубе</option>
@@ -1785,8 +1785,8 @@
                         </td>
                         <td>
                             <input class="form-control" placeholder="Кол-во" style="    float: left;  width: 40%;  margin: 0 2px;" id="t2">
-                            <select style=" width: 57%; float: left;" id="t3" id="AddRequest_measures">
-                                <option value="" disabled selected class="placeholder">Ед. изм</option>
+                            <select style=" width: 57%; float: left;color:#000;" id="t3">
+                                <option value=""  selected class="placeholder">Ед. изм</option>
                                 <option value="1">м3</option>
                                 <option value="2">комплект</option>
                                 <option value="3">шт</option>
@@ -1813,7 +1813,13 @@
                     <div class="col-xs-12">
                         <textarea class="form-control" placeholder="Комментарии"></textarea>
                     </div>
+                    <div id="AddRequest_msg" style="display:none">
+                    <span class="alarm_limit col-xs-12" style="margin: 25px 0 25px 10px;">Внимание! Позиция 2 превышает лимит товара</span>
+                    <input type="checkbox" style="margin-left: 20px;"> Добавить заявку, несмотря на предупреждение
+                    </div>
                 </div>
+
+
                 <!--<div class="row">-->
                     <!--<div class="col-xs-12">-->
                         <!--<p style="margin-top: 7px"><input type="checkbox" name="option1" value="a1" >Создать заявку, не смотря на пердупреждение</p>-->
@@ -1821,7 +1827,7 @@
                 <!--</div>-->
             </div>
             <div class="modal-footer" style="text-align: left">
-                <button type="button" class="btn add_project " data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Добавить заявку </button>
+                <button id="AddRequest_btn" type="button" class="btn add_project " data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Добавить заявку </button>
                 <button type="button" class="btn clear_btn"><i class="ico"></i>Очистить</button>
             </div>
         </div>
@@ -1864,10 +1870,20 @@
 <script>
     $(document).ready(function() {
         $('.add_btn').click(function () {
-            addRowToTable2($('#table_add_plans'), $('#t1').val(), $('#t2').val(), $('#t3').val(), $('#t4').val());
-            $('#t1,#t2,#t3,#t4').val('');
-            $('#t1,#t3').addClass('placeholder');
+            if ($('#t1 option:selected').val() !== "") {
+                var row = $('#table_add_plans');
+
+                addRowToTable2($('#table_add_plans'), $('#t1 option:selected').text(), $('#t2').val(), $('#t3 option:selected').text(), $('#t4').val());
+
+                $('#t1,#t2,#t3,#t4').val('');
+                $('#t1,#t3').addClass('placeholder');
+                if (row.find('tbody tr').length == 3) {
+                    row.find('tbody tr').last().addClass('alarm_row');
+                    $('#AddRequest_msg').show();
+                }
+            }
         });
+//        $('#btn add_project ')
         var firmList = {
             '0':{name:'Вася', contacts:'777-777'},
             '1':{name:'Кузя', contacts:'111-111'}
@@ -1880,6 +1896,10 @@
                 $('#AddRequest_contactFace').val(name);
                 $('#AddRequest_contacts').val(contacts);
             }
+        });
+
+        $('#AddRequest_btn').on('click',function(){
+            $('#AddRequest_msg').hide();
         });
 
         $('#t1').on('change',function(){
