@@ -1309,3 +1309,25 @@ tr.alarm_row td span .btn_del_zap {
   height: 100%;
   margin-top: 15px;
 }
+.record_table tr th span {
+  text-align: left;
+}
+.btn_postaw.btn_close {
+  background-color: #ACD086;
+  opacity: 1;
+  display: inline-block;
+}
+.btn_postaw {
+  background-color: gray;
+  opacity: 0;
+  border: 0;
+  border-radius: 2px;
+  padding: 3px;
+  margin: -3px;
+  color: #ffffff;
+  display: none;
+}
+.btn_postaw:hover,
+.btn_postaw:active {
+  background-color: #d4fdac;
+}
