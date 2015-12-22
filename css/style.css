@@ -230,7 +230,7 @@ body {
 html {
   min-height: 100%;
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 58px;
 }
 body {
   min-width: 1280px;
@@ -1342,10 +1342,13 @@ tr.alarm_row td span .btn_del_zap {
   width: 100%;
   margin-bottom: 0px;
 }
-tr.highlight_row:nth-child(3) td span {
+.alert_tr.highlight_row:hover td span {
   background-color: tomato;
 }
-tr.highlight_row:nth-child(3) td button {
+.alert_tr.highlight_row td span {
+  background-color: tomato;
+}
+.alert_tr.highlight_row td button {
   background-color: #F4B7AC;
   opacity: 1;
   display: inline-block;

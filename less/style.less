@@ -263,7 +263,7 @@ body,
 html {
   min-height: 100%;
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 58px;
 }
 body {
   min-width: 1280px;
@@ -1434,7 +1434,14 @@ tr.alarm_row {
   width: 100%;
   margin-bottom: 0px;
 }
-tr.highlight_row:nth-child(3) {
+.alert_tr.highlight_row {
+  &:hover {
+    td {
+      span {
+        background-color: tomato;
+      }
+    }
+  }
   td {
     span {
       background-color: tomato;
