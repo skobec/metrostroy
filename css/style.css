@@ -551,6 +551,10 @@ p.ps1 {
   padding: 15px 20px;
   background-color: #e3edf6;
 }
+.left_bl_content .panel-default .panel-heading a p {
+  float: right;
+  padding-top: 4px;
+}
 .left_bl_content .panel-default .panel-heading a .ico {
   background: url("../img/bigraskr-2.png") no-repeat right;
   width: 16px;
@@ -1158,8 +1162,21 @@ select option {
 .placeholder {
   color: #aaa;
 }
+.pointer_tables tbody {
+  counter-reset: list 0;
+}
 .pointer_tables tbody tr {
   cursor: pointer;
+}
+.pointer_tables tbody tr:before {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #64788f;
+  font-size: 12px;
+  counter-increment: list;
+  content: counter(list) ".";
+  margin-top: 10px;
+  float: left;
 }
 .nav_paginator {
   text-align: center;
@@ -1188,6 +1205,26 @@ select option {
 }
 .info_zak .zak_name {
   color: #000000;
+}
+.number_proj {
+  font-size: 11px;
+}
+.name_proj {
+  font-size: 11px;
+}
+.comment_means {
+  font-size: 12px;
+}
+.cifr_means {
+  font-size: 12px;
+}
+.cifr_procent {
+  font-size: 12px;
+  color: #03D603;
+  margin-left: 10px;
+}
+.cifr_procent_alarm {
+  color: tomato;
 }
 .ellow_blue_bl {
   background-color: #e3edf6;
