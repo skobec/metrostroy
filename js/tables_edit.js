@@ -31,6 +31,31 @@ $(document).ready(function() {
         $(this).closest('tr').fadeOut(300, function(){ }).remove();
         return false;
     });
+
+
+
+    $('#myModal77').on('show', function() {
+        var id = $(this).data('id'),
+            removeBtn = $(this).find('.danger');
+    })
+
+    $('.btn_del_zap').on('click', function(e) {
+        e.preventDefault();
+
+        var id = $(this).data('id');
+        $('#myModal77').data('id', id).modal('show');
+    });
+
+    $('#btnYes').click(function() {
+        // handle deletion here
+        var id = $('#myModal19').data('id');
+        $('[data-id='+id+']').remove();
+        $('#myModal19').modal('hide');
+    });
+
+
+
+
     var addClass = function(el, className) {
             if (el.classList) {
                 el.classList.add(className);
