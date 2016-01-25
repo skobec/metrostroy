@@ -1162,13 +1162,13 @@ select option {
 .placeholder {
   color: #aaa;
 }
-.pointer_tables tbody {
-  counter-reset: list 0;
-}
 .pointer_tables tbody tr {
   cursor: pointer;
 }
-.pointer_tables tbody tr:before {
+.number_tablet tbody {
+  counter-reset: list 0;
+}
+.number_tablet tbody tr:before {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   color: #64788f;

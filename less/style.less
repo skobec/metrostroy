@@ -1212,9 +1212,15 @@ select option { color: #000; }
 .placeholder { color: #aaa; }
 .pointer_tables {
   tbody {
-    counter-reset: list 0;
     tr {
       cursor: pointer;
+    }
+  }
+}
+.number_tablet {
+  tbody {
+    counter-reset: list 0;
+    tr {
       &:before {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-weight: bold;

@@ -512,7 +512,7 @@ $(document).ready(function() {
     })(jQuery);
 
 
-    $(".it").mask("99/99/99");
+    $(".it").mask("99.99.9999");
     $(".it").textPlaceholder();
 //маркер ввода даты в поле с календарем
 
