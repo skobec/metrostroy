@@ -182,7 +182,7 @@
                                                            <td><span>42000 р</span></td>
                                                            <td><span>7 дней</span></td>
                                                            <td style="width: 145px"><span></span></td>
-                                                           <td style="width: 200px"><button class="btn_postaw" data-dismiss="modal" data-toggle="modal" data-target="#myModal4" disabled="disabled">Выбрать поставщика</button></td>
+                                                           <td style="width: 200px"><button class="btn_postaw" disabled="disabled">Выбрать поставщика</button></td>
                                                            <!--<td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>-->
                                                        </tr>
                                                        </tbody>
@@ -1022,7 +1022,7 @@
                         <p style="text-align: center">Увеличить бюджет проекта?</p>
                     </div>
                     <div class="col-xs-12 text-center">
-                        <button class="btn add_zayav" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Продолжить</button>
+                        <button class="btn add_zayav" data-dismiss="modal" data-toggle="modal"><i class="ico"></i> Продолжить</button>
                     </div>
                 </div>
 
@@ -1081,6 +1081,17 @@
         if ($(this).is(":checked")) {
             $(this).closest('tr').addClass("highlight_row");
             $(this).closest('tr').find('td button').addClass("btn_close").removeAttr('disabled');
+        }
+    });
+    $("tr+tr+tr input[type='radio']").click(function (e) {
+        e.stopPropagation();
+        $('.record_table tr').removeClass("highlight_row");
+        $('.record_table tr td button').removeClass("btn_close").attr('disabled',true);
+        if ($(this).is(":checked")) {
+            $(this).closest('tr').addClass("highlight_row");
+            $(this).closest('tr').find('td button').addClass("btn_close").removeAttr('disabled');
+            $('#myModal5').modal('show');
+
         }
     });
 </script>
