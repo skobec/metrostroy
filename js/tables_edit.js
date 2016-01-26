@@ -25,21 +25,21 @@ $(document).ready(function() {
     //    return false;
     //});
     $(document).on('click', 'a.btn_del_zap', function () {
-        if($(this).closest('tr').hasClass('alarm_row')){
-            $('#AddRequest_msg').hide();
-        }
-        $(this).closest('tr').fadeOut(300, function(){ }).remove();
-        return false;
+        //if($(this).closest('tr').hasClass('alarm_row')){
+        //    $('#AddRequest_msg').hide();
+        //}
+        //$(this).closest('tr').fadeOut(300, function(){ }).remove();
+        //return false;
     });
 
 
-    //
-    //$('#myModal77').on('show', function() {
-    //    var id = $(this).data('id'),
-    //        removeBtn = $(this).find('.danger');
-    //});
 
-    $('#Table1 tbody tr').on('click', function(e) {
+    $('#myModal77').on('show', function() {
+        var id = $(this).data('id'),
+            removeBtn = $(this).find('.danger');
+    });
+
+    $('#page_1 table tbody tr').on('click', function(e) {
         //alert('CLICK');
         if(e.target.className !== 'btn_del_zap'){
 
@@ -47,24 +47,28 @@ $(document).ready(function() {
         }
 
     });
-    //
-    //$('a.btn_del_zap').on('click', function(e) {
-    //    //$.data('#btnYes','row-id',5);
-    //    //e.preventDefault();
-    //
-    //    var id = $(this).data('id');
-    //    //$('#myModal77').data('id', id).modal('show');
-    //    $('#myModal77').modal('show');
-    //    $('#btnYes').data('id',5);
-    //});
-    //
-    //$('#btnYes').click(function() {
-    //    // handle deletion here
-    //    var id = $('#myModal19').data('id');
-    //    $('[data-id='+id+']').remove();
-    //    $('#myModal19').modal('hide');
-    //});
-    //
+
+    $('a.btn_del_zap').on('click', function() {
+        var row = ($(this).data('row'));
+        //$.data('#btnYes','row-id',5);
+        //e.preventDefault();
+
+        //var id = $(this).data('id');
+        //$('#myModal77').data('id', id).modal('show');
+        $('#myModal77').modal('show');
+        $('#btnYes').data('row',row);
+        return false;
+    });
+
+    $('#btnYes').click(function() {
+        // handle deletion here
+        //var id = $('#myModal19').data('id');
+        //$('[data-id='+id+']').remove();
+        var row = ($(this).data('row'));
+        $('#page_1 table tbody').find('.btn_del_zap[data-row='+row+']').closest('tr').remove();
+        $('#myModal77').modal('hide');
+    });
+
 
 
 
