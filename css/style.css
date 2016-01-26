@@ -520,7 +520,7 @@ p.ps1 {
 }
 .right_bl_info {
   padding: 8px 15px;
-  border-left: 1px solid #b2b2b2;
+  background-color: #fafafa;
 }
 .title_end_proj {
   color: #556a82;
@@ -537,6 +537,7 @@ p.ps1 {
 .left_bl_content {
   padding-right: 0;
   padding-left: 0;
+  border-right: 1px solid #b2b2b2;
 }
 .left_bl_content .panel-default {
   -webkit-border-radius: 1px;
@@ -711,7 +712,7 @@ select.add_project {
   margin: 5px 2px;
 }
 .calendar_inputs {
-  margin: 10px 0;
+  margin: 10px 0 0;
 }
 .calendar_inputs input {
   width: 45%;
@@ -740,7 +741,7 @@ select.add_project {
   margin-left: 10px;
 }
 .blue_pod_bl {
-  padding: 5px 20px;
+  padding: 20px;
   width: 100%;
   background-color: #d1deec;
 }
@@ -1451,6 +1452,7 @@ tr.alarm_row td span .btn_del_zap {
 }
 .alert_tr.highlight_row td span {
   background-color: tomato;
+  color: white;
 }
 .alert_tr.highlight_row td button {
   background-color: #F4B7AC;
@@ -1465,6 +1467,26 @@ tr.alarm_row td span .btn_del_zap {
 }
 .post_select_ed {
   text-decoration: underline!important;
+}
+.vertical-alignment-helper {
+  display: table;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.vertical-align-center {
+  /* To center vertically */
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none;
+}
+.modal-content {
+  /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+  width: inherit;
+  height: inherit;
+  /* To center horizontally */
+  margin: 0 auto;
+  pointer-events: all;
 }
 .validate {
   position: relative;
