@@ -848,6 +848,26 @@
                     $('#myModal77').modal('hide');
                 });
 
+            $('#t2').on('change', function() {
+                $(this).next('.error_message').text('');
+            });
+
+            $('#t1').on('change', function() {
+                $(this).next('.error_message').text('');
+            });
+
+
+            $('.add_btn').click(function() {
+                $('#t1').next('.error_message').text('');
+                $('#t2').next('.error_message').text('');
+                if (validateInput()) {
+                    addRowToTable3($('#table_add_plans'), $('#t1 option:selected').text(), $('#t2').val(), $('#t3 option:selected').text());
+                    $('#t1,#t2,#t3').val("");
+                    $('#t1,#t2').addClass('placeholder');
+                }
+            });
+
+        })
 
             })
         </script>
