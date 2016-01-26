@@ -1209,6 +1209,12 @@ select option {
 .info_zak .zak_name {
   color: #000000;
 }
+.info_zak .zak_name span {
+  color: #2269b6;
+}
+.zak_com span {
+  color: #2269b6;
+}
 .number_proj {
   font-size: 11px;
 }
