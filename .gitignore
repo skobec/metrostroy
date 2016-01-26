@@ -2,7 +2,7 @@
 # Created by https://www.gitignore.io/api/netbeans,phpstorm,composer
 
 ### NetBeans ###
-nbproject/private/
+nbproject/
 build/
 nbbuild/
 dist/
@@ -70,3 +70,6 @@ composer.phar
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
 # composer.lock
 
+.idea/workspace.xml
+.idea/workspace.xml
+.idea/workspace.xml

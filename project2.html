@@ -66,7 +66,7 @@
 
                 </div>
                 <div class="col-xs-5 text-right">
-                    <span class="number_sum"><span class="one_sum"><span>1</span>-<span>20</span></span> из <span>3026</span>   </span>
+                    <span class="number_sum"><span class="one_sum"><span>1</span>-<span id="one_sum_from">20</span></span> из <span>3026</span>   </span>
                     <div class="paginator_arrow">
                         <a href="#" class="arrow arrow_left"><</a>
                         <a href="project3.html" class="arrow arrow_right">></a>
@@ -91,6 +91,41 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <tr class="tr-hover" data-href="tov_process.html">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12541                     </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>12 декабря 2015	12:26</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <span class="name_zakazaka">САФ-1</span>
+                            <span class="box">
+                                <h4><span class="expand">Махонин И.И.</span></h4>
+                                <ul>
+                                    <li>,+7917783333</li>
+                                    <li><a href="#">starokob@mail.ru</a> </li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">ОПГС 24 машин</span>
+                        <td valign="top" style="white-space: nowrap;">
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34512-1 Ф0.2</span>
+                            <a href="#">Утвержденный план декабрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #79d2fe" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Новая</span>
+
+                        </td>
+                    </tr>
                     <tr class="tr-hover"  data-href="tov_norm.html">
 
                         <td valign="top" style="white-space: nowrap; cursor: default;">
@@ -1918,6 +1953,19 @@
                 $('#t3').val(selectedVal);
             }
         });
+
+
+		$("#nav-search").on('keydown', function(e) {
+			if (e.which == 13) {
+				var headerElement=$('.arrow_sort').parent();
+				var searchString=$("#nav-search").val();
+				var foundElements = $( ".table td:contains('" + searchString + "')" );
+				$('.table tr').not('table table tr').not(headerElement).addClass('unvisible');
+				$(foundElements).parent().removeClass('unvisible');
+				var len=foundElements.length==160?20:foundElements.length;
+				$('#one_sum_from').html(len);
+			}
+		});
     })
 </script>
 </body>
