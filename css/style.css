@@ -25,6 +25,9 @@ body,
 .navbar-fixed-bottom {
   min-width: 970px;
 }
+.modal-open {
+  overflow-y: inherit;
+}
 /* Don't let the lead text change font-size. */
 .lead {
   font-size: 16px;
@@ -1204,6 +1207,12 @@ select option {
   color: #64788f;
 }
 .info_zak .zak_name {
+  color: #000000;
+}
+.info_zak .zak_name span {
+  color: #000000;
+}
+.zak_com span {
   color: #000000;
 }
 .number_proj {
