@@ -1210,10 +1210,10 @@ select option {
   color: #000000;
 }
 .info_zak .zak_name span {
-  color: #2269b6;
+  color: #000000;
 }
 .zak_com span {
-  color: #2269b6;
+  color: #000000;
 }
 .number_proj {
   font-size: 11px;
@@ -1407,4 +1407,8 @@ tr.alarm_row td span .btn_del_zap {
 }
 .post_select_ed {
   text-decoration: underline!important;
+}
+
+.unvisible{
+	display: none;
 }
