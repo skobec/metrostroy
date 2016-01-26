@@ -838,6 +838,7 @@
             //$('[data-id='+id+']').remove();
             var row = ($(this).data('row'));
             $('#page_2 table tbody').find('.btn_del_zap[data-row='+row+']').closest('tr').remove();
+			$('.alarm_limit').css('display', 'none');
             $('#myModal77').modal('hide');
         });
 
