@@ -866,15 +866,15 @@
             var input2Value = $('#t2').val();
 
             if (input1Value == "") {
-                input1.next('.error_message').text('Не заполнена позиция');
+                input1.next('.error_message').text('* Не заполнена позиция');
                 isValid = false;
             }
             if (input2Value == "") {
-                input2.next('.error_message').text('Не указано количество');
+                input2.next('.error_message').text('* Не указано количество');
                 isValid = false;
             }
             if (input2Value !== "" && !regexp.test(input2Value)) {
-                input2.next('.error_message').text('Значение должно быть числом');
+                input2.next('.error_message').text('* Значение должно быть числом');
                 isValid = false;
             }
             return isValid;
