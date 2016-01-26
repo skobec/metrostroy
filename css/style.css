@@ -506,6 +506,13 @@ p.ps1 {
   float: left;
   min-height: 36px;
 }
+
+a.add_project{
+  margin-right: 25px;
+  color: #333;
+  text-decoration: None;
+}
+
 .add_project .ico {
   background: url("../img/add_2.png") 100% 100% no-repeat;
   width: 12px;
@@ -1270,6 +1277,10 @@ tr.alarm_row td span .btn_edit {
 }
 tr.alarm_row td span .btn_del_zap {
   background: url("../img/delete.png") no-repeat 100% 100%;
+}
+
+.tr-hover{
+  cursor: pointer;
 }
 .mini_table tr td a,
 .mini_table tr td span {
