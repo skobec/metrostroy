@@ -506,13 +506,6 @@ p.ps1 {
   float: left;
   min-height: 36px;
 }
-
-a.add_project{
-  margin-right: 25px;
-  color: #333;
-  text-decoration: None;
-}
-
 .add_project .ico {
   background: url("../img/add_2.png") 100% 100% no-repeat;
   width: 12px;
@@ -1311,7 +1304,7 @@ select option {
   margin-left: 15px;
   width: 98.6%;
   height: 110px!important;
-  margin-top: 15px;
+  margin-top: 25px;
   resize: none;
 }
 span.zayav_prosrok {
@@ -1335,10 +1328,6 @@ tr.alarm_row td span .btn_edit {
 }
 tr.alarm_row td span .btn_del_zap {
   background: url("../img/delete.png") no-repeat 100% 100%;
-}
-
-.tr-hover{
-  cursor: pointer;
 }
 .mini_table tr td a,
 .mini_table tr td span {
@@ -1477,8 +1466,6 @@ tr.alarm_row td span .btn_del_zap {
 .post_select_ed {
   text-decoration: underline!important;
 }
-<<<<<<< HEAD
-=======
 .validate {
   position: relative;
 }
@@ -1499,4 +1486,3 @@ tr.alarm_row td span .btn_del_zap {
 .unvisible {
   display: none;
 }
->>>>>>> origin/master
