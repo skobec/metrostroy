@@ -825,6 +825,9 @@ select.add_project {
   margin-right: 5px;
   margin-top: 4px;
 }
+.tr-hover {
+  cursor: pointer;
+}
 .clear_btn {
   padding: 7px;
   background: #cee3f8;
