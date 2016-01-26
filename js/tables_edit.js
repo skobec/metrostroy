@@ -12,7 +12,7 @@ function addRowToTable3(table, cell1, cell2, cell3) {
     var row_count = $(table).find('tbody').children('tr').length;
     row_count++;
     var row;
-    row = "<tr><td style='width: 245px'><span style='text-align: center'>" + cell1 + "</span></td><td style='width: 70px'><span style='text-align: left'>" + cell2 +" "+ cell3 +"</span></td><td style='width:1px'><span>"
+    row = "<tr><td style='width: 100px'><span style='text-align: center'>" + cell1 + "</span></td><td style='width: 70px'><span style='text-align: left'>" + cell2 +" "+ cell3 +"</span></td><td style='width:1px'><span>"
         + ('<a href="#" class="btn_edit"></a><a href="#" data-row="'+row_count+'" class="btn_del_zap"></a>') + "</span></td></tr>";
     table.append(row);
 }

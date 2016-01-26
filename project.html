@@ -88,7 +88,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="row">
+        <div class="row full_head_contetn">
             <div class="col-xs-8 left_bl_content">
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-default">
@@ -512,7 +512,7 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="padding: 20px">
                     <a href="#" class="" style="margin-top: 5px">Позиции плана</a>
                     <!--<p style="margin-top: 5px"><input type="checkbox" name="option1" value="a1" >Перенести недосвоенные позиции текущего года</p>-->
                 <table class="table_plans" id="table_add_plans">
@@ -1085,8 +1085,8 @@
                     </tr>
                     </tbody>
                 </table>
-                         </div>
-            <div class="modal-footer">
+            </div>
+            <div class="modal-footer" style="padding: 0 20px 20px">
                 <button type="button" class="btn add_zayav" data-dismiss="modal" data-toggle="modal" data-target="#myModal4"><i class="ico"></i> Добавить план </button>
                 <button type="button" class="btn clear_btn"><i class="ico"></i>Очистить</button>
             </div>
@@ -1281,6 +1281,7 @@
     var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
 
     var checkin = $('#dpd1').datepicker({
+        format: 'dd.mm.yyyy',
         onRender: function(date) {
             return date.valueOf() < now.valueOf() ? 'disabled' : '';
         }
@@ -1294,6 +1295,7 @@
         $('#dpd2')[0].focus();
     }).data('datepicker');
     var checkout = $('#dpd2').datepicker({
+        format: 'dd.mm.yyyy',
         onRender: function(date) {
             return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
         }

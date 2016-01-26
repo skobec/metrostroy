@@ -5,20 +5,20 @@ button {
   font-family: Arial, sans-serif;
 }
 a {
-  -webkit-transition: 0.3s ;
-  -moz-transition: 0.3s ;
-  -ms-transition: 0.3s ;
-  -o-transition: 0.3s ;
-  transition: 0.3s ;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   font-size: 13px;
   font-family: Arial, sans-serif;
 }
 button {
   -webkit-transition: 0.3s;
-  -moz-transition: 0.3s ;
-  -ms-transition: 0.3s ;
-  -o-transition: 0.3s ;
-  transition: 0.3s ;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 body,
 .navbar-fixed-top,
@@ -237,7 +237,7 @@ html {
 }
 body {
   min-width: 1280px;
-  padding: 0!important;
+  padding: 0 !important;
 }
 a {
   color: #2269b6;
@@ -322,7 +322,7 @@ input[type=submit],
   color: #fff;
   cursor: pointer;
   margin-top: 15px;
-  text-decoration: none!important;
+  text-decoration: none !important;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -381,7 +381,7 @@ p.ps1 {
   font-size: 150%;
 }
 .container {
-  width: 100%!important;
+  width: 100% !important;
   min-width: 1260px;
   max-width: none !important;
 }
@@ -400,6 +400,7 @@ p.ps1 {
   min-height: 58px;
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   min-width: 1280px;
 }
@@ -463,10 +464,10 @@ p.ps1 {
 }
 .nav_menu li a {
   -webkit-transition: 0.3s;
-  -moz-transition: 0.3s ;
-  -ms-transition: 0.3s ;
-  -o-transition: 0.3s ;
-  transition: 0.3s ;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   color: #92d6ff;
   border: 1px solid transparent;
   border-right: 1px solid #387fc6;
@@ -521,6 +522,10 @@ p.ps1 {
 .right_bl_info {
   padding: 8px 15px;
   border-left: 1px solid #b2b2b2;
+  background-color: #fafafa;
+  position: absolute;
+  height: 100%;
+  right: 0;
 }
 .title_end_proj {
   color: #556a82;
@@ -587,8 +592,8 @@ p.ps1 {
 .plans_proj:hover,
 .plans_proj:focus,
 .plans_proj:active {
-  outline: none!important;
-  text-decoration: none!important;
+  outline: none !important;
+  text-decoration: none !important;
 }
 .table_plans tbody tr td:nth-child(2) span {
   text-align: left;
@@ -682,7 +687,7 @@ p.ps1 {
 .modal_project textarea.form-control {
   resize: none;
   height: 100px;
-  margin: 10px 0;
+  margin: 25px 0 10px;
 }
 .modal_project .close {
   background: url("../img/closewindow.png") no-repeat;
@@ -711,7 +716,7 @@ select.add_project {
   margin: 5px 2px;
 }
 .calendar_inputs {
-  margin: 10px 0;
+  margin: 10px 0 0;
 }
 .calendar_inputs input {
   width: 45%;
@@ -735,12 +740,15 @@ select.add_project {
   -moz-border-radius: 0;
   border-radius: 0;
   border: 1px solid #000000;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 .modal-content .modal-title {
   margin-left: 10px;
 }
 .blue_pod_bl {
-  padding: 5px 20px;
+  padding: 20px;
   width: 100%;
   background-color: #d1deec;
 }
@@ -822,6 +830,9 @@ select.add_project {
   background-position: 100% 51%;
   margin-right: 5px;
   margin-top: 4px;
+}
+.tr-hover {
+  cursor: pointer;
 }
 .clear_btn {
   padding: 7px;
@@ -955,7 +966,7 @@ table input {
   font-size: 12px;
 }
 input.mac-style {
-  width: 90px!important;
+  width: 90px !important;
   -webkit-transition: width 0.5s ease-in-out;
   -moz-transition: width 0.5s ease-in-out;
   -o-transition: width 0.5s ease-in-out;
@@ -977,7 +988,7 @@ input.mac-style {
   font-style: italic;
 }
 input.mac-style:focus {
-  width: 200px!important;
+  width: 200px !important;
 }
 .search_bl_input {
   display: inline-block;
@@ -1036,11 +1047,11 @@ input.mac-style:focus {
   width: 15px;
   position: absolute;
   right: 0;
-  -webkit-transition: 0.3s ;
-  -moz-transition: 0.3s ;
-  -ms-transition: 0.3s ;
-  -o-transition: 0.3s ;
-  transition: 0.3s ;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .box h4 .expand_arrow:after {
   -webkit-transform: rotate(-30deg);
@@ -1226,15 +1237,17 @@ select option {
   font-size: 11px;
 }
 .comment_means {
-  font-size: 12px;
+  font-size: 11px;
+  width: 85%;
 }
 .cifr_means {
   font-size: 12px;
 }
 .cifr_procent {
-  font-size: 12px;
+  font-size: 11px;
   color: #03D603;
   margin-left: 10px;
+  float: right;
 }
 .true_info {
   color: #309730;
@@ -1303,7 +1316,7 @@ select option {
 .comments_fr {
   margin-left: 15px;
   width: 98.6%;
-  height: 110px!important;
+  height: 110px !important;
   margin-top: 25px;
   resize: none;
 }
@@ -1448,6 +1461,7 @@ tr.alarm_row td span .btn_del_zap {
 }
 .alert_tr.highlight_row:hover td span {
   background-color: tomato;
+  color: white;
 }
 .alert_tr.highlight_row td span {
   background-color: tomato;
@@ -1464,7 +1478,24 @@ tr.alarm_row td span .btn_del_zap {
   height: 28px;
 }
 .post_select_ed {
-  text-decoration: underline!important;
+  text-decoration: underline !important;
+}
+.vertical-alignment-helper {
+  display: table;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.vertical-align-center {
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none;
+}
+.modal-content {
+  width: inherit;
+  height: inherit;
+  margin: 0 auto;
+  pointer-events: all;
 }
 .validate {
   position: relative;
@@ -1485,4 +1516,40 @@ tr.alarm_row td span .btn_del_zap {
 }
 .unvisible {
   display: none;
+}
+.full_head_contetn {
+  min-height: 75vh;
+  position: relative;
+}
+.btn.secondary {
+  padding: 7px;
+  background: #cee3f8;
+  background: linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -o-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  -webkit-border-radius: 0;
+  border: 1px solid #A2A2A2;
+  text-align: left;
+  color: #000000;
+}
+.btn.danger {
+  padding: 7px;
+  background: #cee3f8;
+  background: linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -o-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  -webkit-border-radius: 0;
+  border: 1px solid #A2A2A2;
+  text-align: left;
+  color: #000000;
+}
+@media screen and (max-width: 1500px) {
+  .comment_means {
+    font-size: 11px;
+    width: 100%;
+  }
 }

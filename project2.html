@@ -1296,7 +1296,7 @@
                 <table class="table_plans">
                     <tbody>
                      <tr>
-                        <td style="width: 390px;">
+                         <td class="validate" style="width: 390px;">
                             <select style="width: 100%;" id="t1">
                                 <!--<option value="1">м3</option>-->
                                 <!--<option value="2">комплект</option>-->
@@ -1817,9 +1817,12 @@
                                 <option>Щебень фракции 20 - 40 мм</option>
                                 <option>Брус 100х100 мм</option>
                             </select>
-                        </td>
-                        <td>
+                             <div class="error_message"></div>
+
+                         </td>
+                        <td class="validate">
                             <input class="form-control" placeholder="Кол-во" style="    float: left;  width: 40%;  margin: 0 2px;" id="t2">
+                            <div class="error_message"></div>
                             <select style=" width: 57%; float: left;" id="t3">
                                 <option value="" disabled selected class="placeholder">Ед. изм</option>
                                 <option value="1">м3</option>
@@ -1836,6 +1839,8 @@
                                 <option value="12">пог. м</option>
                                 <option value="13">м. п.</option>
                             </select>
+                            <div class="error_message"></div>
+
                         </td>
                         <td style="width: 120px;">
                             <button class="add_btn"><i class="ico"></i> </button>
@@ -1904,20 +1909,20 @@
 <script src="js/tables_edit.js"></script>
 <script>
     $(document).ready(function() {
-        $('.add_btn').click(function () {
-            if ($('#t1 option:selected').val() !== "") {
-                var row = $('#table_add_plans');
-
-                addRowToTable2($('#table_add_plans'), $('#t1 option:selected').text(), $('#t2').val(), $('#t3 option:selected').text(), $('#t4').val());
-
-                $('#t1,#t2,#t3,#t4').val('');
-                $('#t1,#t3').addClass('placeholder');
-                if (row.find('tbody tr').length == 3) {
-                    row.find('tbody tr').last().addClass('alarm_row');
-                    $('#AddRequest_msg').show();
-                }
-            }
-        });
+//        $('.add_btn').click(function () {
+//            if ($('#t1 option:selected').val() !== "") {
+//                var row = $('#table_add_plans');
+//
+//                addRowToTable2($('#table_add_plans'), $('#t1 option:selected').text(), $('#t2').val(), $('#t3 option:selected').text(), $('#t4').val());
+//
+//                $('#t1,#t2,#t3,#t4').val('');
+//                $('#t1,#t3').addClass('placeholder');
+//                if (row.find('tbody tr').length == 3) {
+//                    row.find('tbody tr').last().addClass('alarm_row');
+//                    $('#AddRequest_msg').show();
+//                }
+//            }
+//        });
 //        $('#btn add_project ')
         var firmList = {
             '0':{name:'', contacts:''},
@@ -1966,6 +1971,47 @@
 				$('#one_sum_from').html(len);
 			}
 		});
+        $('#t2').on('change', function() {
+            $(this).next('.error_message').text('');
+        });
+
+        $('#t1').on('change', function() {
+            $(this).next('.error_message').text('');
+        });
+
+
+        $('.add_btn').click(function() {
+            $('#t1').next('.error_message').text('');
+            $('#t2').next('.error_message').text('');
+            if (validateInput()) {
+                addRowToTable3($('#table_add_plans'), $('#t1 option:selected').text(), $('#t2').val(), $('#t3 option:selected').text());
+                $('#t1,#t2,#t3').val("");
+                $('#t1,#t2').addClass('placeholder');
+            }
+            function validateInput() {
+                var input1 = $('#t1');
+                var input2 = $('#t2');
+                var isValid = true;
+                var regexp = /^\d+$/;
+                var input1Value = $('#t1 option:selected').val();
+                var input2Value = $('#t2').val();
+
+                if (input1Value == "") {
+                    input1.next('.error_message').text('* Не заполнена позиция');
+                    isValid = false;
+                }
+                if (input2Value == "") {
+                    input2.next('.error_message').text('* Не указано количество');
+                    isValid = false;
+                }
+                if (input2Value !== "" && !regexp.test(input2Value)) {
+                    input2.next('.error_message').text('* Значение должно быть числом');
+                    isValid = false;
+                }
+                return isValid;
+            }
+        });
+
     })
 </script>
 </body>
