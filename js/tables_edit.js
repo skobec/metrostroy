@@ -9,8 +9,11 @@ function addRowToTable2(table, cell1, cell2, cell3, cell4) {
     table.append(row);
 }
 function addRowToTable3(table, cell1, cell2, cell3) {
+    var row_count = $(table).find('tbody').children('tr').length;
+    row_count++;
     var row;
-    row = "<tr><td style='width: 245px'><span style='text-align: center'>" + cell1 + "</span></td><td style='width: 70px'><span style='text-align: left'>" + cell2 +" "+ cell3 +"</span></td><td style='width:1px'><span>" + ('<a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a>') + "</span></td></tr>";
+    row = "<tr><td style='width: 245px'><span style='text-align: center'>" + cell1 + "</span></td><td style='width: 70px'><span style='text-align: left'>" + cell2 +" "+ cell3 +"</span></td><td style='width:1px'><span>"
+        + ('<a href="#" class="btn_edit"></a><a href="#" data-row="'+row_count+'" class="btn_del_zap"></a>') + "</span></td></tr>";
     table.append(row);
 }
 $(document).ready(function() {
@@ -48,7 +51,7 @@ $(document).ready(function() {
 
     });
 
-    $('a.btn_del_zap').on('click', function() {
+    $('#page_1').on('click','a.btn_del_zap', function() {
         var row = ($(this).data('row'));
         //$.data('#btnYes','row-id',5);
         //e.preventDefault();
@@ -59,6 +62,8 @@ $(document).ready(function() {
         $('#btnYes').data('row',row);
         return false;
     });
+
+
 
     $('#btnYes').click(function() {
         // handle deletion here

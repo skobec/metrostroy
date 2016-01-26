@@ -19,7 +19,29 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body id="page_2">
+<div class="modal modal_project fade" id="myModal77" tabindex="-1" role="dialog" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title text-center" id="">Уведомление</h4>
+        </div>
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <p>Внимание! Выбранная запись будет удалена!</p>
+            </div>
+            <div class="modal-footer">
+                <div class="text-center">
+                    <a href="#" id="btnYes" class="btn danger">Продолжить</a>
+                    <a href="#" data-dismiss="modal" aria-hidden="true" class="btn secondary">Отмена</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 <div class="header">
     <div class="container">
         <div class="row head_titl_bl">
@@ -95,19 +117,19 @@
                                     <!--<th style="width: 15px" scope="row">1</th>-->
                                     <td style="width: 245px;"><span>Цемент М-400</span></td>
                                     <td style="width: 70px"><span>20 м3</span></td>
-                                    <td style="width: 1px"><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                    <td style="width: 1px"><span><a href="#" class="btn_edit"></a><a href="#" data-row="1" class="btn_del_zap"></a> </span></td>
                                 </tr>
                                 <tr class="alarm_row">
                                     <!--<th scope="row">2</th>-->
                                     <td><span>Цемент м-300</span></td>
                                     <td><span>102 м3</span></td>
-                                    <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                    <td><span><a href="#" class="btn_edit"></a><a href="#" data-row="2" class="btn_del_zap"></a> </span></td>
                                 </tr>
                                 <tr>
                                     <!--<th scope="row">3</th>-->
                                     <td><span>Песок</span></td>
                                     <td><span>1 т</span></td>
-                                    <td><span><a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a> </span></td>
+                                    <td><span><a href="#" class="btn_edit"></a><a href="#" data-row="3" class="btn_del_zap"></a> </span></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -779,6 +801,7 @@
 </script>
 <script src="js/tables_edit.js"></script>
 <script>
+
     $('.add_btn').click(function() {
         if($('#t1 option:selected').val() !== "") {
             addRowToTable3($('#table_add_plans'), $('#t1 option:selected').text(), $('#t2').val(), $('#t3 option:selected').text());
@@ -788,6 +811,7 @@
     });
 
     $(document).ready(function() {
+
         $('#t1').on('change',function(){
             var selectedVal = Number($(this).val());
             if(selectedVal){
@@ -795,6 +819,29 @@
                 $('#t3').val(selectedVal);
             }
         });
+
+
+        $('#page_2').on('click','a.btn_del_zap', function() {
+            var row = ($(this).data('row'));
+            //$.data('#btnYes','row-id',5);
+            //e.preventDefault();
+
+            //var id = $(this).data('id');
+            //$('#myModal77').data('id', id).modal('show');
+            $('#myModal77').modal('show');
+            $('#btnYes').data('row',row);
+            return false;
+        });
+        $('#btnYes').click(function() {
+            // handle deletion here
+            //var id = $('#myModal19').data('id');
+            //$('[data-id='+id+']').remove();
+            var row = ($(this).data('row'));
+            $('#page_2 table tbody').find('.btn_del_zap[data-row='+row+']').closest('tr').remove();
+            $('#myModal77').modal('hide');
+        });
+
+
     })
 </script>
 </body>
