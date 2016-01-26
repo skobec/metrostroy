@@ -42,7 +42,7 @@ $(document).ready(function() {
             removeBtn = $(this).find('.danger');
     });
 
-    $('#page_1 table tbody tr').on('click', function(e) {
+    $('#page_1 table a.btn_edit').on('click', function(e) {
         //alert('CLICK');
         if(e.target.className !== 'btn_del_zap'){
 
@@ -563,5 +563,3 @@ $(document).ready(function() {
 //маркер ввода даты в поле с календарем
 
 });
-
-
