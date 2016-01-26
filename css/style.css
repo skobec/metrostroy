@@ -1197,6 +1197,10 @@ select option {
 }
 .journal_bl span {
   display: block;
+  font-size: 11px;
+}
+.title_close_doc {
+  font-size: 14px;
 }
 .info_zak {
   margin-bottom: 7px;
@@ -1231,6 +1235,60 @@ select option {
   font-size: 12px;
   color: #03D603;
   margin-left: 10px;
+}
+.true_info {
+  color: #309730;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+}
+.true_info:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  height: 7px;
+  width: 7px;
+  background: url("../img/true_info.png") no-repeat;
+}
+.false_info {
+  color: #dc3434;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+}
+.false_info:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  height: 7px;
+  width: 1px;
+  background-color: #dc3434;
+}
+.modal-dialog.modal_close_doc {
+  width: 286px;
+}
+.modal-dialog.modal_close_doc .modal-body {
+  padding: 0 20px;
+}
+.modal-dialog.modal_close_doc textarea {
+  font-size: 11px;
+  margin-top: 35px;
+}
+.modal-dialog.modal_close_doc label {
+  color: gray;
+  font-size: 9px;
+  font-style: italic;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.modal-dialog.modal_close_doc label input {
+  float: left;
+  margin-top: -1px;
+  margin-right: 4px;
+}
+.alarm_modal_close {
+  font-size: 11px;
+  font-style: italic;
+  color: #dc3434;
 }
 .cifr_procent_alarm {
   color: tomato;
@@ -1407,8 +1465,4 @@ tr.alarm_row td span .btn_del_zap {
 }
 .post_select_ed {
   text-decoration: underline!important;
-}
-
-.unvisible{
-	display: none;
 }

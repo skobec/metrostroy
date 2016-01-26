@@ -1252,7 +1252,11 @@ select option { color: #000; }
   margin-bottom: 7px;
   span {
     display: block;
+    font-size: 11px;
   }
+}
+.title_close_doc {
+  font-size: 14px;
 }
 .info_zak {
   margin-bottom: 7px;
@@ -1289,6 +1293,60 @@ select option { color: #000; }
   font-size: 12px;
   color: #03D603;
   margin-left: 10px;
+}
+.true_info {
+  color: #309730;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 7px;
+    width: 7px;
+    background: url("../img/true_info.png")no-repeat;
+  }
+}
+.false_info {
+  color: #dc3434;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 7px;
+    width: 1px;
+    background-color: #dc3434;
+  }
+}
+.modal-dialog.modal_close_doc {
+  width: 286px;
+  .modal-body {
+    padding: 0 20px;
+  }
+  textarea {
+    font-size: 11px;
+    margin-top: 35px;
+  }
+  label {
+    color: gray;
+    font-size: 9px;
+    font-style: italic;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    input {
+      float: left;
+      margin-top: -1px;
+      margin-right: 4px;
+    }
+  }
+}
+.alarm_modal_close {
+  font-size: 11px;
+  font-style: italic;
+  color: #dc3434;
 }
 .cifr_procent_alarm {
   color: tomato;

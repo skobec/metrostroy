@@ -198,8 +198,8 @@
     </div>
 </div>
 
-<div class="modal modal_project fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
-    <div class="modal-dialog" role="document" style="width: 400px">
+<div class="modal modal_project fade in" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" style="display: block">
+    <div class="modal-dialog modal_close_doc" role="document">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -208,24 +208,49 @@
         </div>
         <div class="modal-content">
             <div class="modal-body">
+                <div class="row journal_bl">
+                    <div class="col-xs-12">
+                        <h4 class="title_close_doc">Документ об исполнении</h4>
+                    </div>
+                </div>
+                <div class="row journal_bl">
+                    <div class="col-xs-6">
+                        <span>Договор</span>
+                    </div>
+                    <div class="col-xs-6">
+                        <span class="true_info">соответствует</span>
+                    </div>
+                </div>
+                <div class="row journal_bl">
+                    <div class="col-xs-6">
+                        <span>Товарная накладная</span>
+                    </div>
+                    <div class="col-xs-6">
+                        <span class="true_info">соответствует</span>
+                    </div>
+                </div>
+                <div class="row journal_bl">
+                    <div class="col-xs-6">
+                        <span>Счет-фактура</span>
+                    </div>
+                    <div class="col-xs-6">
+                        <span class="false_info">отсутствует</span>
+                    </div>
+                </div>
                 <div class="row">
-                    <div class="col-xs-8">
-                        <div class="row journal_bl">
-                            <div class="col-xs-4">
-                                <span>Договор</span>
-                            </div>
-                            <div class="col-xs-8">
-                                <span>соответсвует</span>
-                            </div>
-                        </div>
-                        <div class="row journal_bl">
-                            <div class="col-xs-4">
-                                <span>Товарная накладная</span>
-                            </div>
-                            <div class="col-xs-8">
-                                <span>соответсвует</span>
-                            </div>
-                        </div>
+                    <div class="col-xs-12">
+                        <textarea class="form-control" placeholder="Счет-фактура отсутствует в связи  с упрощенной системой налогооблажения"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="alarm_modal_close">Внимание!Счет-фактура отсутствует!</p>
+                        <label><input type="checkbox">Закрыть заявку, несмотря на предупреждение</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button class="v_rab btn" data-dismiss="modal"><i class="ico"></i>Закрыть заявку</button>
                     </div>
                 </div>
             </div>
