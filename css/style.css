@@ -1399,3 +1399,7 @@ tr.alarm_row td span .btn_del_zap {
 .post_select_ed {
   text-decoration: underline!important;
 }
+
+.unvisible{
+	display: none;
+}
