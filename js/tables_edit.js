@@ -9,8 +9,11 @@ function addRowToTable2(table, cell1, cell2, cell3, cell4) {
     table.append(row);
 }
 function addRowToTable3(table, cell1, cell2, cell3) {
+    var row_count = $(table).find('tbody').children('tr').length;
+    row_count++;
     var row;
-    row = "<tr><td style='width: 245px'><span style='text-align: center'>" + cell1 + "</span></td><td style='width: 70px'><span style='text-align: left'>" + cell2 +" "+ cell3 +"</span></td><td style='width:1px'><span>" + ('<a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a>') + "</span></td></tr>";
+    row = "<tr><td style='width: 245px'><span style='text-align: center'>" + cell1 + "</span></td><td style='width: 70px'><span style='text-align: left'>" + cell2 +" "+ cell3 +"</span></td><td style='width:1px'><span>"
+        + ('<a href="#" class="btn_edit"></a><a href="#" data-row="'+row_count+'" class="btn_del_zap"></a>') + "</span></td></tr>";
     table.append(row);
 }
 $(document).ready(function() {
@@ -25,12 +28,55 @@ $(document).ready(function() {
     //    return false;
     //});
     $(document).on('click', 'a.btn_del_zap', function () {
-        if($(this).closest('tr').hasClass('alarm_row')){
-            $('#AddRequest_msg').hide();
+        //if($(this).closest('tr').hasClass('alarm_row')){
+        //    $('#AddRequest_msg').hide();
+        //}
+        //$(this).closest('tr').fadeOut(300, function(){ }).remove();
+        //return false;
+    });
+
+
+
+    $('#myModal77').on('show', function() {
+        var id = $(this).data('id'),
+            removeBtn = $(this).find('.danger');
+    });
+
+    $('#page_1 table a.btn_edit').on('click', function(e) {
+        //alert('CLICK');
+        if(e.target.className !== 'btn_del_zap'){
+
+            $('#myModal3').modal('show');
         }
-        $(this).closest('tr').fadeOut(300, function(){ }).remove();
+
+    });
+
+    $('#page_1').on('click','a.btn_del_zap', function() {
+        var row = ($(this).data('row'));
+        //$.data('#btnYes','row-id',5);
+        //e.preventDefault();
+
+        //var id = $(this).data('id');
+        //$('#myModal77').data('id', id).modal('show');
+        $('#myModal77').modal('show');
+        $('#btnYes').data('row',row);
         return false;
     });
+
+
+
+    $('#btnYes').click(function() {
+        // handle deletion here
+        //var id = $('#myModal19').data('id');
+        //$('[data-id='+id+']').remove();
+        var row = ($(this).data('row'));
+        $('#page_1 table tbody').find('.btn_del_zap[data-row='+row+']').closest('tr').remove();
+        $('#myModal77').modal('hide');
+    });
+
+
+
+
     var addClass = function(el, className) {
             if (el.classList) {
                 el.classList.add(className);
@@ -512,10 +558,8 @@ $(document).ready(function() {
     })(jQuery);
 
 
-    $(".it").mask("99/99/99");
+    $(".it").mask("99.99.9999");
     $(".it").textPlaceholder();
 //маркер ввода даты в поле с календарем
 
 });
-
-
