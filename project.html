@@ -549,7 +549,7 @@
 
                     <tbody>
                     <tr>
-                        <td style="    width: 349px;">
+                        <td style="    width: 349px;" class="validate">
                             <select style="width: 100%" id="t1">
                                 <option value="" disabled selected class="placeholder">Выберите из списка</option>
                                 <option value="1">Бетон марка 200</option>
@@ -1056,8 +1056,9 @@
                                 <option>Щебень фракции 20 - 40 мм</option>
                                 <option>Брус 100х100 мм</option>
                             </select>
+                            <div class="error_message"></div>
                         </td>
-                        <td style="width: 172px">
+                        <td style="width: 172px" class="validate">
                             <input class="form-control" placeholder="Кол-во" style="width: 50%;display: inline-block" id="t2">
                             <select style="width: 45%" id="t3">
                                 <option disabled selected class="placeholder" value="">Ед. изм</option>
@@ -1075,6 +1076,7 @@
                                 <option value="12">пог. м</option>
                                 <option value="13">м. п.</option>
                             </select>
+                            <div class="error_message"></div>
                         </td>
                         <td style="width: 86px">
                             <input class="form-control" placeholder="Стоимость" id="t4">
@@ -1305,13 +1307,6 @@
 </script>
 <script src="js/tables_edit.js"></script>
 <script>
-    $('.add_btn').click(function() {
-        if ($('#t1 option:selected').val() !== "") {
-            addRowToTable($('#table_add_plans'), $('#t1 option:selected').text(), $('#t2').val(), $('#t3 option:selected').text(), $('#t4').val());
-            $('#t1,#t2,#t3,#t4').val('');
-            $('#t1,#t3').addClass('placeholder');
-        }
-    });
     $(document).ready(function() {
         $('#t1').on('change', function() {
             var selectedVal = Number($(this).val());
@@ -1320,7 +1315,39 @@
                 $('#t3').val(selectedVal);
             }
         });
+
+        $('.add_btn').click(function() {
+//            if ($('#t1 option:selected').val() !== "") {
+            if (validateInput()) {
+
+                addRowToTable($('#table_add_plans'), $('#t1 option:selected').text(), $('#t2').val(), $('#t3 option:selected').text(), $('#t4').val());
+                $('#t1,#t2,#t3,#t4').val('');
+                $('#t1,#t3').addClass('placeholder');
+            }
+        });
     });
+    function validateInput() {
+        var input1 = $('#t1');
+        var input2 = $('#t2');
+        var isValid = true;
+        var regexp = /^\d+$/;
+        var input1Value = $('#t1 option:selected').val();
+        var input2Value = $('#t2').val();
+
+        if (input1Value == "") {
+            input1.next('.error_message').text('* Не заполнена позиция');
+            isValid = false;
+        }
+        if (input2Value == "") {
+            input2.next('.error_message').text('* Не указано количество');
+            isValid = false;
+        }
+        if (input2Value !== "" && !regexp.test(input2Value)) {
+            input2.next('.error_message').text('* Значение должно быть числом');
+            isValid = false;
+        }
+        return isValid;
+    }
 </script>
 </body>
 </html>
