@@ -1502,15 +1502,17 @@ tr.alarm_row td span .btn_del_zap {
   position: relative;
 }
 .error_message {
-  padding-left: 20px;
+  margin-left: 10px;
   color: red;
   display: block;
   float: left;
   font-size: 12px;
   position: absolute;
-  bottom: -20px;
+  top: 40px;
   left: -10px;
   font-size: 10px;
+  width: 114px;
+  text-align: left;
 }
 .table {
   margin-bottom: 40px !important;
