@@ -1650,3 +1650,45 @@ tr.alarm_row td span .btn_del_zap {
 .bl_load_files span {
   font-size: 12px;
 }
+.close_file {
+  position: relative;
+}
+.close_file:hover .close_file_ico {
+  display: block;
+}
+.close_file_ico {
+  display: none;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: -8px;
+  top: -6px;
+}
+.close_file_ico:after {
+  content: "";
+  width: 1px;
+  background-color: #000000;
+  height: 7px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.close_file_ico:before {
+  content: "";
+  width: 1px;
+  background-color: #000000;
+  height: 7px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}

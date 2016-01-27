@@ -1957,3 +1957,48 @@ tr.alarm_row {
         font-size: 12px;
     }
 }
+.close_file {
+    position: relative;
+    &:hover {
+        .close_file_ico {
+            display: block;
+        }
+    }
+
+}
+.close_file_ico {
+    display: none;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: -8px;
+    top: -6px;
+    &:after {
+        content: "";
+        width: 1px;
+        background-color: #000000;
+        height: 7px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    &:before {
+        content: "";
+        width: 1px;
+        background-color: #000000;
+        height: 7px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}

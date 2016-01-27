@@ -91,6 +91,38 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <tr class="tr-hover"  data-href="tov_process.html">
+
+                        <td valign="top" style="white-space: nowrap; cursor: default;">
+                            12536                      </td>
+                        <td valign="top">
+                            <table width="100%">
+                                <tbody><tr>
+                                    <td>12 января 2016	17:51</td>
+                                </tr>
+                                </tbody></table>
+                        </td>
+                        <td valign="top" style="cursor: auto">
+                            <span class="name_zakazaka">Татстрой</span>
+                            <span class="box">
+                                <h4><span class="expand">Хамитов Д.В.</span></h4>
+                                </span>
+                        </td>
+                        <td valign="top">
+                            <span class="expand">Сталь листовая 50</span>
+                        <td valign="top" style="white-space: nowrap;">
+                            323 116,14
+                        </td>
+                        <td>
+                            <span style="display: block">Проект № 34511-1 МКД 7.2</span>
+                            <a href="#">Утвержденный план ноябрь 2015</a>
+                        </td>
+                        <td>
+                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #b46bd1" title="Поступившее"></span>
+                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">В работе</span>
+
+                        </td>
+                    </tr>
                     <tr class="tr-hover"  data-href="tov_norm.html">
 
                         <td valign="top" style="white-space: nowrap; cursor: default;">
@@ -391,38 +423,6 @@
                         <td>
                             <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #74cf98" title="Поступившее"></span>
                             <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">Выполнена</span>
-
-                        </td>
-                    </tr>
-                    <tr class="tr-hover"  data-href="tov_process.html">
-
-                        <td valign="top" style="white-space: nowrap; cursor: default;">
-                            12536                      </td>
-                        <td valign="top">
-                            <table width="100%">
-                                <tbody><tr>
-                                    <td>29 ноября 2015	18:03</td>
-                                </tr>
-                                </tbody></table>
-                        </td>
-                        <td valign="top" style="cursor: auto">
-                            <span class="name_zakazaka">Татстрой</span>
-                            <span class="box">
-                                <h4><span class="expand">Хамитов Д.В.</span></h4>
-                                </span>
-                        </td>
-                        <td valign="top">
-                            <span class="expand">Сталь листовая 50</span>
-                        <td valign="top" style="white-space: nowrap;">
-                            323 116,14
-                        </td>
-                        <td>
-                            <span style="display: block">Проект № 34511-1 МКД 7.2</span>
-                            <a href="#">Утвержденный план ноябрь 2015</a>
-                        </td>
-                        <td>
-                            <span style="width: 6px; height: 24px; border: 1px solid #aaa; margin-top: 4px; display: inline-block;    float: left; background-color: #b46bd1" title="Поступившее"></span>
-                            <span style="margin-left: 7px;   margin-top: 7px;    display: inline-block;    float: left;">В работе</span>
 
                         </td>
                     </tr>
@@ -1964,7 +1964,7 @@
                 var input1 = $('#t1');
                 var input2 = $('#t2');
                 var isValid = true;
-                var regexp = /^\d+$/;
+                var regexp = /^[0-9.,]+$/;
                 var input1Value = $('#t1 option:selected').val();
                 var input2Value = $('#t2').val();
 
