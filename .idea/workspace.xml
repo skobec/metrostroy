@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d8174b7-56ea-4019-8626-66cd0a74d24c" name="Default" comment="merge">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/style.less" afterPath="$PROJECT_DIR$/less/style.less" />
+    <list default="true" id="3d8174b7-56ea-4019-8626-66cd0a74d24c" name="Default" comment="issue 31 fix">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.html" afterPath="$PROJECT_DIR$/project.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="metrostroy.iws" />
@@ -81,8 +80,8 @@
       <file leaf-file-name="tov_prosrok.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tov_prosrok.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2520" max-vertical-offset="16128">
-              <caret line="140" column="39" selection-start-line="140" selection-start-column="39" selection-end-line="140" selection-end-column="39" />
+            <state vertical-scroll-proportion="-14.888889" vertical-offset="14862" max-vertical-offset="16128">
+              <caret line="848" column="16" selection-start-line="848" selection-start-column="16" selection-end-line="848" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -119,21 +118,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.92008877" vertical-offset="32939" max-vertical-offset="33894">
-              <caret line="1876" column="1" selection-start-line="1876" selection-start-column="1" selection-end-line="1876" selection-end-column="1" />
+            <state vertical-scroll-proportion="-22.037037" vertical-offset="31967" max-vertical-offset="33930">
+              <caret line="1809" column="1" selection-start-line="1809" selection-start-column="1" selection-end-line="1809" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="project.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.327586" vertical-offset="15001" max-vertical-offset="15876">
-              <caret line="1362" column="36" selection-start-line="1362" selection-start-column="36" selection-end-line="1362" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.45390898" vertical-offset="14713" max-vertical-offset="16074">
+              <caret line="1344" column="19" selection-start-line="1344" selection-start-column="19" selection-end-line="1344" selection-end-column="19" />
               <folding>
                 <element signature="n#select#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -173,8 +172,8 @@
         <option value="$PROJECT_DIR$/tov_norm.html" />
         <option value="$PROJECT_DIR$/tov_process.html" />
         <option value="$PROJECT_DIR$/report.html" />
-        <option value="$PROJECT_DIR$/project.html" />
         <option value="$PROJECT_DIR$/less/style.less" />
+        <option value="$PROJECT_DIR$/project.html" />
       </list>
     </option>
   </component>
@@ -320,7 +319,19 @@
       <option name="project" value="LOCAL" />
       <updated>1453874551548</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="merge styles">
+      <created>1453874770655</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1453874770655</updated>
+    </task>
+    <task id="LOCAL-00006" summary="issue 31 fix">
+      <created>1453874933437</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1453874933437</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -378,7 +389,9 @@
     <MESSAGE value="списки выбора материалов + единицы измерения (план&amp;заявки)" />
     <MESSAGE value="уведомление о превышении плана в добавлении заявки" />
     <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="merge styles" />
+    <MESSAGE value="issue 31 fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="issue 31 fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -729,14 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tov_prosrok.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2520" max-vertical-offset="16128">
-          <caret line="140" column="39" selection-start-line="140" selection-start-column="39" selection-end-line="140" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/less/scaffolding.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -804,23 +809,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/less/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.037037" vertical-offset="31967" max-vertical-offset="33930">
+          <caret line="1809" column="1" selection-start-line="1809" selection-start-column="1" selection-end-line="1809" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tov_prosrok.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.888889" vertical-offset="14862" max-vertical-offset="16128">
+          <caret line="848" column="16" selection-start-line="848" selection-start-column="16" selection-end-line="848" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.327586" vertical-offset="15001" max-vertical-offset="15876">
-          <caret line="1362" column="36" selection-start-line="1362" selection-start-column="36" selection-end-line="1362" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.45390898" vertical-offset="14713" max-vertical-offset="16074">
+          <caret line="1344" column="19" selection-start-line="1344" selection-start-column="19" selection-end-line="1344" selection-end-column="19" />
           <folding>
             <element signature="n#select#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92008877" vertical-offset="32939" max-vertical-offset="33894">
-          <caret line="1876" column="1" selection-start-line="1876" selection-start-column="1" selection-end-line="1876" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>

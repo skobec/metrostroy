@@ -1328,6 +1328,7 @@
         <script>
             $(document).ready(function() {
                 $('#t1').on('change', function() {
+                    $(this).next('.error_message').text('');
                     var selectedVal = Number($(this).val());
                     if (selectedVal) {
                         $("#t3").removeClass('placeholder');
@@ -1335,9 +1336,19 @@
                     }
                 });
 
-                $('.add_btn').click(function() {
-                    if (validateInput()) {
+                $('#t2').on('change', function() {
+                    $(this).next('.error_message').text('');
+                });
 
+                $('#t4').on('change', function() {
+                    $(this).next('.error_message').text('');
+                });
+
+                $('.add_btn').click(function() {
+                    $('#t1').next('.error_message').text('');
+                    $('#t2').next('.error_message').text('');
+                    $('#t4').next('.error_message').text('');
+                    if (validateInput()) {
                         addRowToTable($('#table_add_plans'), $('#t1 option:selected').text(), $('#t2').val(), $('#t3 option:selected').text(), $('#t4').val());
                         $('#t1,#t2,#t3,#t4').val('');
                         $('#t1,#t3').addClass('placeholder');
