@@ -124,15 +124,15 @@
                                 </tr>
                                 <tr class="alarm_row">
                                     <!--<th scope="row">2</th>-->
-                                    <td style=""><span>Цемент м-300</span></td>
-                                    <td style=""><span>102 м3</span></td>
-                                    <td><span><a href="#" class="btn_edit"></a><a href="#" data-row="2" class="btn_del_zap"></a> </span></td>
+                                    <td style="width: 350px;"><span>Цемент м-300</span></td>
+                                    <td style="width: 60px"><span>102 м3</span></td>
+                                    <td style="width: 60px"><span><a href="#" class="btn_edit"></a><a href="#" data-row="2" class="btn_del_zap"></a> </span></td>
                                 </tr>
                                 <tr>
                                     <!--<th scope="row">3</th>-->
-                                    <td style=""><span>Песок</span></td>
-                                    <td style=""><span>1 т</span></td>
-                                    <td style=""><span><a href="#" class="btn_edit"></a><a href="#" data-row="3" class="btn_del_zap"></a> </span></td>
+                                    <td style="width: 350px;"><span>Песок</span></td>
+                                    <td style="width: 60px"><span>1 т</span></td>
+                                    <td style="width: 60px"><span><a href="#" class="btn_edit"></a><a href="#" data-row="3" class="btn_del_zap"></a> </span></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -677,7 +677,7 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <span class="alarm_limit">Внимание! Позиция 2 превышает лимит товара</span>
+                            <span class="alarm_limit">Внимание! Позиция <span id="limit-row">2</span> превышает лимит товара</span>
                             <textarea class="form-control comments_fr" placeholder="Комментарии"></textarea>
 
                         </div>
@@ -837,7 +837,7 @@
             //$('[data-id='+id+']').remove();
             var row = ($(this).data('row'));
             $('#page_2 table tbody').find('.btn_del_zap[data-row='+row+']').closest('tr').remove();
-			$('.alarm_limit').css('display', 'none');
+	    row==2 ? $('.alarm_limit').css('display', 'none'):row==1?$('#limit-row').text('1'):false;
             $('#myModal77').modal('hide');
         });
 
