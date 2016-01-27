@@ -415,11 +415,11 @@ p.ps1 {
 .nav_menu {
   background: #3b86da;
   /* ��� ������ �������� */
-  background: linear-gradient(top, #5995D2 35%, #347dc2 100%);
-  background: -o-linear-gradient(top, #5995D2 35%, #347dc2 100%);
-  background: -moz-linear-gradient(top, #5995D2 35%, #347dc2 100%);
-  background: -webkit-linear-gradient(top, #5995D2 35%, #347dc2 100%);
-  background: -ms-linear-gradient(top, #5995D2 35%, #347dc2 100%);
+  background: linear-gradient(top, #5995d2 35%, #347dc2 100%);
+  background: -o-linear-gradient(top, #5995d2 35%, #347dc2 100%);
+  background: -moz-linear-gradient(top, #5995d2 35%, #347dc2 100%);
+  background: -webkit-linear-gradient(top, #5995d2 35%, #347dc2 100%);
+  background: -ms-linear-gradient(top, #5995d2 35%, #347dc2 100%);
   border-bottom: 1px solid #104363;
   border-top: 1px solid #DBEBFB;
 }
@@ -1177,9 +1177,6 @@ select option {
 .placeholder {
   color: #aaa;
 }
-.pointer_tables tbody tr {
-  cursor: pointer;
-}
 .number_tablet tbody {
   counter-reset: list 0;
 }
@@ -1583,4 +1580,3 @@ tr.alarm_row td span .btn_del_zap {
 .go-back {
   margin-right: 25px;
 }
-/*# sourceMappingURL=style.css.map */
