@@ -1,0 +1,115 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--Generator: Xara Designer (www.xara.com), SVG filter version: 5.0.0.2-->
+<svg stroke-width="0.501" stroke-linejoin="bevel" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" overflow="visible" width="443.772pt" height="164.555pt" viewBox="0 0 443.772 164.555">
+ <defs>
+  <marker id="DefaultArrow2" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_STRAIGHT (-2) -->
+   <g transform="scale(0.0092592592)">
+    <!-- 1/108 -->
+    <path d="M -9 54 L -9 -54 L 117 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow3" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ANGLED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -27 54 L -9 0 L -27 -54 L 135 0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow4" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_ROUNDED -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -9,0 L -9,-45 C -9,-51.708 2.808,-56.580 9,-54 L 117,-9 C 120.916,-7.369 126.000,-4.242 126,0 C 126,4.242 120.916,7.369 117,9 L 9,54 C 2.808,56.580 -9,51.708 -9,45 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow5" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_SPOT -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -54, 0 C -54,29.807 -29.807,54 0,54 C 29.807,54 54,29.807 54,0 C 54,-29.807 29.807,-54 0,-54 C -29.807,-54 -54,-29.807 -54,0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow6" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_DIAMOND -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -63,0 L 0,63 L 63,0 L 0,-63 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow7" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_FEATHER -->
+   <g transform="scale(0.0092592592)">
+    <path d="M 18,-54 L 108,-54 L 63,0 L 108,54 L 18, 54 L -36,0 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow8" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_FEATHER2 -->
+   <g transform="scale(0.0092592592)">
+    <path d="M -36,0 L 18,-54 L 54,-54 L 18,-18 L 27,-18 L 63,-54 L 99,-54 L 63,-18 L 72,-18 L 108,-54 L 144,-54 L 90,0 L 144,54 L 108,54 L 72,18 L 63,18 L 99,54 L 63,54 L 27,18 L 18,18 L 54,54 L 18,54 z"/>
+   </g>
+  </marker>
+  <marker id="DefaultArrow9" markerUnits="strokeWidth" viewBox="0 0 1 1" markerWidth="1" markerHeight="1" overflow="visible" orient="auto">
+   <!-- REF_ARROW_HOLLOWDIAMOND -->
+   <g transform="scale(0.0092592592)">
+    <path d="M 0,45 L -45,0 L 0, -45 L 45, 0 z M 0, 63 L-63, 0 L 0, -63 L 63, 0 z"/>
+   </g>
+  </marker>
+  <filter id="StainedFilter">
+   <feBlend mode="multiply" in2="BackgroundImage" in="SourceGraphic" result="blend"/>
+   <feComposite in="blend" in2="SourceAlpha" operator="in" result="comp"/>
+  </filter>
+  <filter id="BleachFilter">
+   <feBlend mode="screen" in2="BackgroundImage" in="SourceGraphic" result="blend"/>
+   <feComposite in="blend" in2="SourceAlpha" operator="in" result="comp"/>
+  </filter>
+  <filter id="InvertTransparencyBitmapFilter">
+   <feComponentTransfer>
+    <feFuncR type="gamma" amplitude="1.055" exponent=".416666666" offset="-0.055"/>
+    <feFuncG type="gamma" amplitude="1.055" exponent=".416666666" offset="-0.055"/>
+    <feFuncB type="gamma" amplitude="1.055" exponent=".416666666" offset="-0.055"/>
+   </feComponentTransfer>
+   <feComponentTransfer>
+    <feFuncR type="linear" slope="-1" intercept="1"/>
+    <feFuncG type="linear" slope="-1" intercept="1"/>
+    <feFuncB type="linear" slope="-1" intercept="1"/>
+    <feFuncA type="linear" slope="1" intercept="0"/>
+   </feComponentTransfer>
+   <feComponentTransfer>
+    <feFuncR type="gamma" amplitude="1" exponent="2.4" offset="0"/>
+    <feFuncG type="gamma" amplitude="1" exponent="2.4" offset="0"/>
+    <feFuncB type="gamma" amplitude="1" exponent="2.4" offset="0"/>
+   </feComponentTransfer>
+  </filter>
+ </defs>
+ <g id="Document" fill="none" stroke="black" font-family="Times New Roman" font-size="16" transform="scale(1 -1)">
+  <g id="Spread" transform="translate(0 -164.555)">
+   <g id="Layer 1">
+    <path d="M 27.139,24.719 C 25.155,26.526 23.285,28.412 21.527,30.366 L 21.532,30.37 L 21.526,30.366 C -5.223,60.135 -5.576,105.969 21.947,136.18 C 32.419,147.676 45.52,155.364 59.502,159.162 C 62.43,159.957 65.398,160.582 68.388,161.036 L 80.323,83.107 L 80.322,161.934 L 80.323,161.934 L 80.323,83.107 L 100.589,6.872 L 100.605,6.81 C 75.545,0.157 47.718,5.971 27.139,24.719 Z" fill="#74cf98" stroke-width="1.5" stroke="#ffffff" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 80.323,83.107 L 147.201,124.859 C 153.96,114.045 157.875,101.901 158.894,89.538 L 80.323,83.107 Z" fill="#dfcd3e" stroke-width="1.5" stroke="#ffffff" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 80.323,83.107 L 80.323,161.934 C 99.128,161.928 117.989,155.245 133.039,141.705 C 133.162,141.595 133.285,141.483 133.408,141.373 C 138.868,136.398 143.469,130.832 147.201,124.86 L 80.323,83.107 Z" fill="#89c7ff" stroke-width="1.5" stroke="#ffffff" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 80.323,83.107 L 80.305,83.219 L 80.287,83.274 L 48.391,155.278 C 52.028,156.883 55.782,158.213 59.617,159.256 C 59.634,159.26 59.654,159.265 59.673,159.27 L 59.681,159.24 C 62.572,160.021 65.506,160.638 68.467,161.088 C 68.485,161.09 68.505,161.093 68.524,161.096 L 68.529,161.057 C 72.414,161.639 76.337,161.932 80.264,161.934 L 80.322,161.934 L 80.322,83.171 L 80.325,83.158 L 80.322,83.164 L 80.323,83.107 Z M 68.53,161.054 L 68.529,161.057 L 68.53,161.054 Z" fill="#970303" stroke-width="1.5" stroke="#ffffff" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 74.535,4.453 C 71.066,4.689 67.597,5.153 64.149,5.857 L 64.158,5.9 L 79.988,83.148 L 85.159,67.69 L 80.909,83.678 L 152.142,49.857 L 152.181,49.838 C 151.964,49.379 151.742,48.922 151.516,48.467 C 150.831,47.09 150.102,45.73 149.332,44.385 C 146.523,39.49 143.142,34.824 139.187,30.482 C 129.55,19.904 117.69,12.55 104.965,8.484 L 104.998,8.387 C 95.262,5.126 84.907,3.754 74.535,4.453 Z" fill="#b46bd1" stroke="#ffffff" stroke-width="1.5" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 151.595,49.267 L 151.556,49.286 L 80.323,83.107 L 80.427,83.115 L 80.325,83.149 L 157.464,99.41 C 158.151,96.154 158.634,92.857 158.909,89.539 L 158.886,89.537 L 158.894,89.538 C 158.9,89.463 158.906,89.389 158.907,89.297 C 158.998,88.432 159.053,87.563 159.1,85.969 C 159.112,85.82 159.117,85.671 159.118,85.511 C 159.168,84.619 159.181,83.724 159.151,82.059 C 159.154,81.941 159.152,81.824 159.147,81.699 C 159.154,80.791 159.124,79.882 159.01,78.193 C 159.008,78.083 159.001,77.974 158.99,77.856 C 158.954,76.95 158.879,76.044 158.686,74.386 C 158.677,74.257 158.662,74.128 158.642,73.984 C 158.563,73.097 158.446,72.212 158.184,70.648 C 158.165,70.479 158.138,70.312 158.095,70.084 C 158.04,69.62 157.96,69.159 157.875,68.698 C 157.819,68.396 157.761,68.095 157.605,67.467 C 157.464,66.673 157.293,65.883 157.055,64.964 C 156.943,64.339 156.79,63.721 156.606,63.079 C 156.259,61.717 155.867,60.363 155.439,59.018 C 155.436,59.011 155.434,59.004 155.366,58.813 C 155.345,58.721 155.316,58.631 155.287,58.541 L 155.285,58.541 C 154.258,55.392 153.029,52.294 151.595,49.267 Z" fill="#ed7d31" stroke-width="1.5" stroke="#ffffff" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 51.313,109.427 C 65.876,125.412 90.669,126.567 106.655,112.005 C 122.64,97.442 123.795,72.649 109.233,56.663 C 94.67,40.678 69.877,39.523 53.891,54.085 C 37.906,68.648 36.751,93.441 51.313,109.427 Z" fill="#ffffff" stroke="none" stroke-width="0.068" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 129.983,125.108 L 274.858,125.19" fill="none" stroke="#666666" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 131.301,123.504 C 130.393,123.005 129.251,123.337 128.751,124.244 C 128.252,125.152 128.584,126.294 129.491,126.794 C 130.399,127.293 131.541,126.961 132.041,126.054 C 132.54,125.146 132.208,124.004 131.301,123.504 Z" stroke="none" fill="#666666" stroke-linecap="round" stroke-width="0.11" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <text xml:space="preserve" transform="translate(279.626 122.417) scale(1 -1)" font-family="Arial" font-size="8" fill="#333333" stroke-width="0.27" stroke-linejoin="round" stroke-linecap="round" stroke="none" stroke-miterlimit="79.8403193612775"><tspan x="0" y="0">Новые</tspan></text>
+    <text xml:space="preserve" transform="translate(306.646 122.417) scale(1 -1)" font-family="Arial" font-size="8" fill="#333333" stroke-width="0.27" stroke-linejoin="round" stroke-linecap="round" stroke="none" stroke-miterlimit="79.8403193612775"><tspan x="0" y="0">16%</tspan></text>
+    <path d="M 77.037,148.688 L 274.854,148.77" fill="none" stroke="#666666" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 76.581,147.083 C 75.673,146.584 74.531,146.916 74.031,147.823 C 73.532,148.731 73.864,149.873 74.771,150.373 C 75.679,150.872 76.821,150.54 77.321,149.633 C 77.82,148.725 77.488,147.583 76.581,147.083 Z" stroke="none" fill="#666666" stroke-linecap="round" stroke-width="0.11" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <text xml:space="preserve" transform="translate(279.626 145.997) scale(1 -1)" font-family="Arial" font-size="8" fill="#333333" stroke-width="0.27" stroke-linejoin="round" stroke-linecap="round" stroke="none" stroke-miterlimit="79.8403193612775"><tspan x="0" y="0">Отк</tspan><tspan x="13.477" y="0">л</tspan><tspan x="18.235" y="0">онено</tspan></text>
+    <text xml:space="preserve" transform="translate(322.647 145.997) scale(1 -1)" font-family="Arial" font-size="8" fill="#333333" stroke-width="0.27" stroke-linejoin="round" stroke-linecap="round" stroke="none" stroke-miterlimit="79.8403193612775"><tspan x="0" y="0">5%</tspan></text>
+    <path d="M 143.272,103.461 L 274.854,103.543" fill="none" stroke="#666666" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 142.696,101.857 C 141.788,101.358 140.646,101.69 140.146,102.597 C 139.647,103.505 139.979,104.647 140.886,105.147 C 141.794,105.646 142.936,105.314 143.436,104.407 C 143.935,103.499 143.603,102.357 142.696,101.857 Z" stroke="none" fill="#666666" stroke-linecap="round" stroke-width="0.11" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <text xml:space="preserve" transform="translate(279.626 100.77) scale(1 -1)" font-family="Arial" font-size="8" fill="#333333" stroke-width="0.27" stroke-linejoin="round" stroke-linecap="round" stroke="none" stroke-miterlimit="79.8403193612775"><tspan x="0" y="0">Обрабо</tspan><tspan x="28.559" y="0">тк</tspan><tspan x="35.899" y="0">а 6%</tspan></text>
+    <path d="M 145.516,73.184 L 274.86,73.266" fill="none" stroke="#666666" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 145.197,71.58 C 144.289,71.081 143.147,71.413 142.647,72.32 C 142.148,73.228 142.48,74.37 143.387,74.87 C 144.295,75.369 145.437,75.037 145.937,74.13 C 146.436,73.222 146.104,72.08 145.197,71.58 Z" stroke="none" fill="#666666" stroke-linecap="round" stroke-width="0.11" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <text xml:space="preserve" transform="translate(279.626 70.493) scale(1 -1)" font-family="Arial" font-size="8" fill="#333333" stroke-width="0.27" stroke-linejoin="round" stroke-linecap="round" stroke="none" stroke-miterlimit="79.8403193612775"><tspan x="0" y="0">Сог</tspan><tspan x="12.969" y="0">лас</tspan><tspan x="26.176" y="0">ов</tspan><tspan x="34.786" y="0">ание 10%</tspan></text>
+    <path d="M 136.335,44.629 L 274.854,44.711" fill="none" stroke="#666666" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 135.923,43.024 C 135.015,42.525 133.873,42.857 133.373,43.764 C 132.874,44.672 133.206,45.814 134.113,46.314 C 135.021,46.813 136.163,46.481 136.663,45.574 C 137.162,44.666 136.83,43.524 135.923,43.024 Z" stroke="none" fill="#666666" stroke-linecap="round" stroke-width="0.11" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <text xml:space="preserve" transform="translate(279.626 41.938) scale(1 -1)" font-family="Arial" font-size="8" fill="#333333" stroke-width="0.27" stroke-linejoin="round" stroke-linecap="round" stroke="none" stroke-miterlimit="79.8403193612775"><tspan x="0" y="0">В рабо</tspan><tspan x="25.313" y="0">т</tspan><tspan x="28.888" y="0">е 21%</tspan></text>
+    <path d="M 49.382,22.086 L 274.854,22.168" fill="none" stroke="#666666" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="79.8403193612775"/>
+    <path d="M 49.266,20.479 C 48.358,19.98 47.216,20.312 46.716,21.219 C 46.217,22.127 46.549,23.269 47.456,23.769 C 48.364,24.268 49.506,23.936 50.006,23.029 C 50.505,22.121 50.173,20.979 49.266,20.479 Z" stroke="none" fill="#666666" stroke-linecap="round" stroke-width="0.11" stroke-linejoin="miter" marker-start="none" marker-end="none" stroke-miterlimit="79.8403193612775"/>
+    <text xml:space="preserve" transform="translate(279.626 19.395) scale(1 -1)" font-family="Arial" font-size="8" fill="#333333" stroke-width="0.27" stroke-linejoin="round" stroke-linecap="round" stroke="none" stroke-miterlimit="79.8403193612775"><tspan x="0" y="0">Выпо</tspan><tspan x="19.692" y="0">лнено 41%</tspan></text>
+   </g>
+  </g>
+ </g>
+</svg>

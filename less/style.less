@@ -613,7 +613,7 @@ p.ps1 {
     border-left: 1px solid #b2b2b2;
     background-color: #fafafa;
     position: absolute;
-    height: 100%;
+    height: 101%;
     right: 0;
 }
 
@@ -647,7 +647,7 @@ p.ps1 {
                 display: block;
                 width: 100%;
                 height: 100%;
-                padding: 15px 20px;
+                padding: 15px 15px;
                 background-color: #e3edf6;
                 p {
                     float: right;
@@ -659,7 +659,7 @@ p.ps1 {
                     height: 16px;
                     display: inline-block;
                     margin-left: 6px;
-                    margin-bottom: -2px;
+                    margin-bottom: -4px;
                     -webkit-transition: 0.1s;
                     -moz-transition: 0.1s;
                     -ms-transition: 0.1s;
@@ -677,14 +677,26 @@ p.ps1 {
         }
     }
 }
-
+.floats_procent {
+    float: right;
+    width: 33px;
+}
 .no_pad {
     padding: 0;
 }
 
 .plans_proj {
-    background: url("../img/add_2.png") no-repeat 100% 50%;
-    padding-right: 26px;
+    padding: 0 26px 1px 0;
+    position: relative;
+    &:after {
+        content: "";
+        background: url("../img/add_2.png") no-repeat 100% 50%;
+        position: absolute;
+        right: 0;
+        top: -1px;
+        height: 16px;
+        width: 16px;
+    }
 }
 
 .plans_proj:hover, .plans_proj:focus, .plans_proj:active {
@@ -703,6 +715,7 @@ p.ps1 {
     input, select {
         font-size: 12px;
         height: 33px;
+        border: 1px solid;
     }
     .form-control {
         border-color: #AAAAAA;
@@ -725,6 +738,27 @@ p.ps1 {
             th {
                 color: #64788f;
                 font-size: 12px;
+            }
+            td{
+                &:last-child {
+                    text-align: right;
+                    span {
+
+                        a {
+                            &:before {
+                                content: "";
+                                width: 1px;
+                                height: 14px;
+                                background-color: #d1deec;
+                                position: absolute;
+                                left: -1px;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto 0;
+                            }
+                        }
+                    }
+                }
             }
         }
         td {
@@ -792,6 +826,7 @@ p.ps1 {
         background-image: -webkit-linear-gradient(top, #3b86da 75%, #4489d6 100%);
         background-image: -ms-linear-gradient(top, #3b86da 75%, #4489d6 100%);
         color: #ffffff;
+        position: relative;
     }
     textarea.form-control {
         resize: none;
@@ -803,6 +838,11 @@ p.ps1 {
         height: 15px;
         width: 15px;
         opacity: 1;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
         span {
             font-size: 0;
         }
@@ -863,12 +903,13 @@ select.add_project {
     -moz-box-shadow: none;
     box-shadow: none;
     .modal-title {
-        margin-left: 10px;
+        //margin-left: 10px;
     }
 }
 
 .blue_pod_bl {
-    padding: 20px;
+    padding: 15px;
+    //padding: 20px;
     width: 100%;
     background-color: #d1deec;
 }
@@ -978,9 +1019,11 @@ select.add_project {
     background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
     background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
     background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
-    -webkit-border-radius: 0;
     border: 1px solid #A2A2A2;
     text-align: left;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
 
     .ico {
         background: url("../img/delete.png") no-repeat;
@@ -1016,6 +1059,7 @@ select.add_project {
     }
     img {
         width: 100%;
+        background-color: #ffffff;
     }
     .key_ico {
         float: right;
@@ -1073,7 +1117,9 @@ select.add_project {
         margin: auto 0;
     }
 }
-
+.lite_modal {
+    width: 400px;
+}
 .arrow_sort {
     width: 8%;
     + .arrow_sort {
@@ -1454,7 +1500,7 @@ select option {
     font-size: 11px;
     color: #03D603;
     margin-left: 10px;
-    float: right;
+    float: left;
 }
 
 .true_info {
@@ -1794,6 +1840,13 @@ tr.alarm_row {
 
 .validate {
     position: relative;
+    select {
+        position: relative;
+        width: 350px;
+        option {
+            width: 300px;
+        }
+    }
 }
 
 .error_message {
@@ -1829,10 +1882,12 @@ tr.alarm_row {
     background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
     background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
     background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
-    -webkit-border-radius: 0;
     border: 1px solid #A2A2A2;
     text-align: left;
     color: #000000;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
 }
 .btn.danger {
     padding: 7px;
@@ -1842,10 +1897,12 @@ tr.alarm_row {
     background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
     background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
     background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
-    -webkit-border-radius: 0;
     border: 1px solid #A2A2A2;
     text-align: left;
     color: #000000;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
 
 }
 @media screen and (max-width: 1500px) {

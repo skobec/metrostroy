@@ -525,7 +525,7 @@ p.ps1 {
   border-left: 1px solid #b2b2b2;
   background-color: #fafafa;
   position: absolute;
-  height: 100%;
+  height: 101%;
   right: 0;
 }
 .title_end_proj {
@@ -557,7 +557,7 @@ p.ps1 {
   display: block;
   width: 100%;
   height: 100%;
-  padding: 15px 20px;
+  padding: 15px 15px;
   background-color: #e3edf6;
 }
 .left_bl_content .panel-default .panel-heading a p {
@@ -570,7 +570,7 @@ p.ps1 {
   height: 16px;
   display: inline-block;
   margin-left: 6px;
-  margin-bottom: -2px;
+  margin-bottom: -4px;
   -webkit-transition: 0.1s;
   -moz-transition: 0.1s;
   -ms-transition: 0.1s;
@@ -583,12 +583,25 @@ p.ps1 {
 .left_bl_content .panel-default .panel-heading a.collapsed .ico {
   background: url("../img/bigraskr-1.png") no-repeat right;
 }
+.floats_procent {
+  float: right;
+  width: 33px;
+}
 .no_pad {
   padding: 0;
 }
 .plans_proj {
+  padding: 0 26px 1px 0;
+  position: relative;
+}
+.plans_proj:after {
+  content: "";
   background: url("../img/add_2.png") no-repeat 100% 50%;
-  padding-right: 26px;
+  position: absolute;
+  right: 0;
+  top: -1px;
+  height: 16px;
+  width: 16px;
 }
 .plans_proj:hover,
 .plans_proj:focus,
@@ -608,6 +621,7 @@ p.ps1 {
 .table_plans select {
   font-size: 12px;
   height: 33px;
+  border: 1px solid;
 }
 .table_plans .form-control {
   border-color: #AAAAAA;
@@ -628,6 +642,20 @@ p.ps1 {
 .table_plans tbody tr th {
   color: #64788f;
   font-size: 12px;
+}
+.table_plans tbody tr td:last-child {
+  text-align: right;
+}
+.table_plans tbody tr td:last-child span a:before {
+  content: "";
+  width: 1px;
+  height: 14px;
+  background-color: #d1deec;
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
 .table_plans tbody td {
   text-align: left;
@@ -684,6 +712,7 @@ p.ps1 {
   background-image: -webkit-linear-gradient(top, #3b86da 75%, #4489d6 100%);
   background-image: -ms-linear-gradient(top, #3b86da 75%, #4489d6 100%);
   color: #ffffff;
+  position: relative;
 }
 .modal_project textarea.form-control {
   resize: none;
@@ -695,6 +724,11 @@ p.ps1 {
   height: 15px;
   width: 15px;
   opacity: 1;
+  position: absolute;
+  right: 15px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
 .modal_project .close span {
   font-size: 0;
@@ -745,11 +779,8 @@ select.add_project {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.modal-content .modal-title {
-  margin-left: 10px;
-}
 .blue_pod_bl {
-  padding: 20px;
+  padding: 15px;
   width: 100%;
   background-color: #d1deec;
 }
@@ -843,9 +874,11 @@ select.add_project {
   background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
-  -webkit-border-radius: 0;
   border: 1px solid #A2A2A2;
   text-align: left;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
 }
 .clear_btn .ico {
   background: url("../img/delete.png") no-repeat;
@@ -879,6 +912,7 @@ select.add_project {
 }
 .bl_diagramm img {
   width: 100%;
+  background-color: #ffffff;
 }
 .bl_diagramm .key_ico {
   float: right;
@@ -925,6 +959,9 @@ select.add_project {
   top: 0;
   bottom: 0;
   margin: auto 0;
+}
+.lite_modal {
+  width: 400px;
 }
 .arrow_sort {
   width: 8%;
@@ -1245,7 +1282,7 @@ select option {
   font-size: 11px;
   color: #03D603;
   margin-left: 10px;
-  float: right;
+  float: left;
 }
 .true_info {
   color: #309730;
@@ -1499,6 +1536,13 @@ tr.alarm_row td span .btn_del_zap {
 .validate {
   position: relative;
 }
+.validate select {
+  position: relative;
+  width: 350px;
+}
+.validate select option {
+  width: 300px;
+}
 .error_message {
   margin-left: 10px;
   color: red;
@@ -1530,10 +1574,12 @@ tr.alarm_row td span .btn_del_zap {
   background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
-  -webkit-border-radius: 0;
   border: 1px solid #A2A2A2;
   text-align: left;
   color: #000000;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
 }
 .btn.danger {
   padding: 7px;
@@ -1543,10 +1589,12 @@ tr.alarm_row td span .btn_del_zap {
   background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
-  -webkit-border-radius: 0;
   border: 1px solid #A2A2A2;
   text-align: left;
   color: #000000;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
 }
 @media screen and (max-width: 1500px) {
   .comment_means {
