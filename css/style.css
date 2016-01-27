@@ -1574,4 +1574,7 @@ tr.alarm_row td span .btn_del_zap {
   margin: 0 auto;
   pointer-events: all;
 }
+.modal-backdrop {
+  background-color: #fff;
+}
 /*# sourceMappingURL=style.css.map */
