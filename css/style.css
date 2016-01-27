@@ -1647,3 +1647,6 @@ tr.alarm_row td span .btn_del_zap {
 .file-load-block .button-hover {
   border-color: #000000;
 }
+.bl_load_files span {
+  font-size: 12px;
+}
