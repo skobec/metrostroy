@@ -506,6 +506,7 @@ p.ps1 {
   border-radius: 0;
   float: left;
   min-height: 36px;
+  color: #333;
 }
 .add_project .ico {
   background: url("../img/add_2.png") 100% 100% no-repeat;
@@ -1511,7 +1512,7 @@ tr.alarm_row td span .btn_del_zap {
   top: 40px;
   left: -10px;
   font-size: 10px;
-  width: 114px;
+  width: 120px;
   text-align: left;
 }
 .table {
@@ -1578,4 +1579,7 @@ tr.alarm_row td span .btn_del_zap {
 }
 .modal-backdrop {
   background-color: #fff;
+}
+.go-back {
+  margin-right: 25px;
 }
