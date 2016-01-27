@@ -168,7 +168,15 @@
                                                 <span>Счёт фактура</span>
                                             </div>
                                             <div class="col-xs-7">
-                                                <input type="file">
+                                                <div class="fileload">
+                                                    <div class="file-load-block">
+                                                        <input type="file" value="" id="file" />
+                                                        <div class="fileLoad">
+                                                            <input type="text" value="Файл не выбран" />
+                                                            <button>Выберите файл</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -176,7 +184,15 @@
                                                 <span>Прочее</span>
                                             </div>
                                             <div class="col-xs-7">
-                                                <input type="file">
+                                                <div class="fileload">
+                                                    <div class="file-load-block">
+                                                        <input type="file" value="" id="file2" />
+                                                        <div class="fileLoad">
+                                                            <input type="text" value="Файл не выбран" />
+                                                            <button>Выберите файл</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -364,6 +380,21 @@
         addRowToTable($('#table_add_plans'), $('#t1').val(), $('#t2').val(),$('#t3').val(), $('#t4').val());
         $('#t1,#t2,#t3,#t4').val('');
         $('#t1,#t3').addClass('placeholder');
+    });
+    // = Load
+    // отслеживаем изменение инпута file
+    $('#file,#file2').change(function(){
+        // Если файл прикрепили то заносим значение value в переменную
+        var fileResult = $(this).val();
+        // И дальше передаем значение в инпут который под загрузчиком
+        $(this).parent().find('.fileLoad').find('input').val(fileResult);
+    });
+
+    /* Добавляем новый класс кнопке если инпут файл получил фокус */
+    $('#file,#file2').hover(function(){
+        $(this).parent().find('button').addClass('button-hover');
+    }, function(){
+        $(this).parent().find('button').removeClass('button-hover');
     });
 </script>
 </body>
