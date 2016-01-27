@@ -630,7 +630,7 @@ p.ps1 {
   font-size: 12px;
 }
 .table_plans tbody td {
-  text-align: center;
+  text-align: left;
 }
 .table_plans tbody td span {
   width: 100%;
