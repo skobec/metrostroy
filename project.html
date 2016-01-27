@@ -48,6 +48,32 @@
             </div>
         </div>
 
+        <div class="modal modal_project fade" id="confirmAddPlans" tabindex="-1" role="dialog" >
+            <div class="vertical-alignment-helper">
+                <div class="modal-dialog vertical-align-center">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title text-center" id="">Уведомление</h4>
+                        </div>
+                        <div class="modal-content">
+                            <div class="modal-body text-center">
+                                <p>Внимание! Выбранная запись будет удалена!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="text-center">
+                                    <a href="#" id="confirmAddPlansYes" class="btn danger">Продолжить</a>
+                                    <a href="#" id="confirmAddPlansNo" aria-hidden="true" class="btn secondary">Отмена</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
         <div class="header">
@@ -109,7 +135,7 @@
                                             <a href="#" class="plans_proj" data-toggle="modal" data-target="#myModal">Планы проекта</a>
                                         </div>
                                         <div class="col-xs-12">
-                                            <table class="table_plans pointer_tables number_tablet">
+                                            <table class="table_plans pointer_tables number_tablet" id="MainTable">
                                                 <thead>
                                                     <tr>
                                                         <th></th>
@@ -1353,6 +1379,14 @@
                         $('#t1,#t2,#t3,#t4').val('');
                         $('#t1,#t3').addClass('placeholder');
                     }
+                });
+
+                $('#table_add_plans').on('click','a.btn_del_zap', function() {
+                    var row = ($(this).data('row'));
+                    $('#confirmAddPlans').modal('show');
+                    $('#myModal').modal('hide');
+                    $('#confirmAddPlansYes').data('row',row);
+                    return false;
                 });
             });
             function validateInput() {

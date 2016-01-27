@@ -1,6 +1,9 @@
 function addRowToTable(table, cell1, cell2, cell3, cell4) {
+    var row_count = $(table).find('tbody').children('tr').length;
+    row_count++;
     var row;
-    row = "<tr><td><span>" + cell1 + "</span></td><td><span style='text-align: center'>" + cell2 +" "+ cell3 +"</span></td><td><span>" + cell4 + "</span></td><td><span>" + ('<a href="#" class="btn_edit"></a><a href="#" class="btn_del_zap"></a>') + "</span></td></tr>";
+    row = "<tr><td><span>" + cell1 + "</span></td><td><span style='text-align: center'>" + cell2 +" "+ cell3 +"</span></td><td><span>" + cell4 + "</span></td><td><span>"
+    + ('<a href="#" class="btn_edit"></a><a href="#" data-row="'+row_count+'" class="btn_del_zap"></a>') + "</span></td></tr>";
     table.append(row);
 }
 function addRowToTable2(table, cell1, cell2, cell3, cell4) {
@@ -51,7 +54,7 @@ $(document).ready(function() {
 
     });
 
-    $('#page_1').on('click','a.btn_del_zap', function() {
+    $('#MainTable').on('click','a.btn_del_zap', function() {
         var row = ($(this).data('row'));
         //$.data('#btnYes','row-id',5);
         //e.preventDefault();
@@ -64,7 +67,6 @@ $(document).ready(function() {
     });
 
 
-
     $('#btnYes').click(function() {
         // handle deletion here
         //var id = $('#myModal19').data('id');
@@ -72,6 +74,21 @@ $(document).ready(function() {
         var row = ($(this).data('row'));
         $('#page_1 table tbody').find('.btn_del_zap[data-row='+row+']').closest('tr').remove();
         $('#myModal77').modal('hide');
+        return false;
+    });
+
+    $('#confirmAddPlansYes').click(function() {
+        var row = ($(this).data('row'));
+        $('#table_add_plans tbody').find('.btn_del_zap[data-row='+row+']').closest('tr').remove();
+        $('#confirmAddPlans').modal('hide');
+        $('#myModal').modal('show');
+        return false;
+    });
+
+    $('#confirmAddPlansNo').click(function() {
+        $('#confirmAddPlans').modal('hide');
+        $('#myModal').modal('show');
+        return false;
     });
 
 
