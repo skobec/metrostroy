@@ -772,11 +772,9 @@
                         titleId = $parent.find('.title_bl_diagr').data('title-id'),
                         date_from = $parent.find('.date_from_bl_diagr').html(),
                         date_to = $parent.find('.date_to_bl_diagr').html();
-
                 $parent.find('.select_zayav').val(titleId).trigger('change');
                 $parent.find('.date_from').val(date_from);
                 $parent.find('.date_to').val(date_to);
-
             });
 
 
@@ -798,7 +796,6 @@
                 if(idTitle != '4' && title){
                     $img.attr('src', 'img/report_img-' + imgId + '-' + idTitle + '.png');
                 }
-
                 $(this).parents('.edit_bl_diagr').fadeToggle(300);
 
             });
