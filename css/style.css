@@ -513,7 +513,7 @@ p.ps1 {
   width: 12px;
   height: 13px;
   float: left;
-  margin: 3px 8px 3px 3px;
+  margin: 3px 8px 3px 0;
   background-size: cover;
 }
 .status_variant {
@@ -612,7 +612,6 @@ p.ps1 {
 .table_plans tbody tr td:nth-child(2) span {
   text-align: left;
   float: left;
-  padding-left: 5px;
 }
 .table_plans {
   width: 100%;
@@ -635,6 +634,7 @@ p.ps1 {
   font-weight: 100;
   font-style: oblique;
   text-align: center;
+  line-height: 16px;
 }
 .table_plans tbody tr {
   margin: 3px 0;
@@ -666,11 +666,11 @@ p.ps1 {
   font-size: 10px;
   background-color: #d1deec;
   display: block;
-  padding: 6px 10px;
+  padding: 6px 5px 6px 15px;
   max-height: 27px;
   height: 24px;
   position: relative;
-  margin: 6px 0;
+  margin: 3px 0;
 }
 .table_plans tbody td span:after {
   content: "";
@@ -705,6 +705,9 @@ p.ps1 {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+.modal-header {
+  border-bottom: 0;
+}
 .modal_project .modal-header {
   background-image: linear-gradient(top, #3b86da 75%, #4489d6 100%);
   background-image: -o-linear-gradient(top, #3b86da 75%, #4489d6 100%);
@@ -721,14 +724,15 @@ p.ps1 {
 }
 .modal_project .close {
   background: url("../img/closewindow.png") no-repeat;
-  height: 15px;
-  width: 15px;
+  height: 16px;
+  width: 16px;
   opacity: 1;
   position: absolute;
   right: 15px;
   top: 0;
   bottom: 0;
   margin: auto 0;
+  background-size: 100%;
 }
 .modal_project .close span {
   font-size: 0;
@@ -774,7 +778,7 @@ select.add_project {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  border: 1px solid #000000;
+  border: 1px solid #666666;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -810,8 +814,8 @@ select.add_project {
   text-align: left;
   border-top: 0;
 }
-.modal-footer .btn {
-  min-width: 130px;
+.authority_modal {
+  width: 430px;
 }
 .add_zayav {
   padding: 7px;
@@ -920,6 +924,7 @@ select.add_project {
   border: 0;
   height: 27px;
   width: 37px;
+  margin-right: -1px;
 }
 .key_ico {
   float: right;
@@ -984,6 +989,7 @@ select.add_project {
 .table-striped thead tr th {
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 15px;
 }
 .table-striped tbody tr:hover {
   background-color: #e2e8ef;
@@ -995,6 +1001,7 @@ select.add_project {
 }
 .table-striped tbody tr td {
   vertical-align: middle;
+  padding-left: 15px;
 }
 .table-striped a {
   text-decoration: none;
@@ -1004,7 +1011,7 @@ table input {
   font-size: 12px;
 }
 input.mac-style {
-  width: 90px !important;
+  width: 0 !important;
   -webkit-transition: width 0.5s ease-in-out;
   -moz-transition: width 0.5s ease-in-out;
   -o-transition: width 0.5s ease-in-out;
@@ -1210,6 +1217,7 @@ select {
 }
 select option {
   color: #000;
+  text-align: left;
 }
 .placeholder {
   color: #aaa;
@@ -1352,7 +1360,7 @@ select option {
   margin-left: 15px;
   width: 98.6%;
   height: 110px !important;
-  margin-top: 25px;
+  margin-top: 35px;
   resize: none;
 }
 span.zayav_prosrok {
@@ -1401,6 +1409,7 @@ tr.alarm_row td span .btn_del_zap {
 }
 .bl_title_head_diagr {
   padding: 3px 0 3px 30px;
+  font-weight: bold;
 }
 .content_editgraf_bl span {
   font-size: 14px;
@@ -1530,6 +1539,7 @@ tr.alarm_row td span .btn_del_zap {
 .modal-content {
   width: inherit;
   height: inherit;
+  border: 1px solid #666666;
   margin: 0 auto;
   pointer-events: all;
 }
@@ -1548,7 +1558,6 @@ tr.alarm_row td span .btn_del_zap {
   color: red;
   display: block;
   float: left;
-  font-size: 12px;
   position: absolute;
   top: 40px;
   left: -10px;
@@ -1621,6 +1630,7 @@ tr.alarm_row td span .btn_del_zap {
   /* To center horizontally */
   margin: 0 auto;
   pointer-events: all;
+  border: 1px solid #666666;
 }
 .modal-backdrop {
   background-color: #fff;
