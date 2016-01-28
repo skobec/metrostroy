@@ -966,22 +966,24 @@ select.add_project {
   border: 1px solid #89a0b0;
   margin-top: 15px;
   position: relative;
+  overflow: hidden;
 }
 .bl_diagramm span {
   font-size: 9px;
 }
 .bl_diagramm img {
-  width: 618px;
-  height: 265px;
-  margin-left: -1px;
+  width: 627px;
+  height: 274px;
+  margin-left: -6px;
   margin-bottom: -8px;
+  background-color: #ffffff;
 }
 .bl_diagramm .key_ico {
   float: right;
   background: url("../img/key_graf.jpg") no-repeat;
   border: 0;
   height: 27px;
-  width: 37px;
+  width: 36px;
   margin-right: -1px;
 }
 .key_ico {
