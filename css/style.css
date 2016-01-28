@@ -551,7 +551,7 @@ p.ps1 {
 .status_variant {
   padding: 8px!important;
   text-align: left;
-  margin-left: 50px;
+  margin-left: 43px;
   margin-right: 10px;
   height: 26px;
   -webkit-appearance: none;
@@ -693,6 +693,9 @@ p.ps1 {
   color: #64788f;
   font-size: 12px;
 }
+.table_plans tbody tr td:nth-child(1) {
+  text-align: left;
+}
 .table_plans tbody tr td:last-child {
   text-align: right;
 }
@@ -793,6 +796,11 @@ p.ps1 {
 .modal_project .close span {
   font-size: 0;
 }
+.reject_ico .ico {
+  background: url("../img/closewindow.png") 0px -30px no-repeat;
+  width: 15px;
+  height: 15px;
+}
 .ico_search {
   background: url("../img/lupa.png") no-repeat;
   background-position: 100% 0;
@@ -814,7 +822,7 @@ select.add_project {
   margin: 10px 0 0;
 }
 .calendar_inputs input {
-  width: 45%;
+  width: 47%;
   background: #ffffff url("../img/calendar.png") no-repeat 95% 50%;
   padding-right: 25px;
 }
@@ -973,7 +981,7 @@ select.add_project {
 }
 .bl_diagramm img {
   width: 627px;
-  height: 274px;
+  height: 281px;
   margin-left: -6px;
   margin-bottom: -8px;
   background-color: #ffffff;
@@ -1077,12 +1085,7 @@ input.mac-style {
   -o-transition: width 0.5s ease-in-out;
   transition: width 0.5s ease-in-out;
   display: inline-block;
-  background: #cee3f8;
-  background: linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
-  background: -o-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
-  background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
-  background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
-  background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background-color: transparent;
   border: 1px solid #a3b3bf;
   padding-left: 30px;
   float: left;
@@ -1090,7 +1093,9 @@ input.mac-style {
   height: 100%;
   margin-left: 2px;
   font-size: 12px;
-  font-style: italic;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
 }
 input.mac-style:focus {
   width: 200px !important;
@@ -1100,6 +1105,12 @@ input.mac-style:focus {
   position: relative;
   float: left;
   height: 36px;
+  background: #cee3f8;
+  background: linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -o-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -moz-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
+  background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   /* Firefox 19+ */
   /* Firefox 18- */
 }
@@ -1107,7 +1118,7 @@ input.mac-style:focus {
   content: "";
   background: url("../img/lupa.png") no-repeat;
   background-position: 100% 0;
-  width: 19px;
+  width: 16px;
   height: 9px;
   position: absolute;
   left: 15px;
@@ -1291,7 +1302,7 @@ select option {
   font-size: 12px;
   counter-increment: list;
   content: counter(list) "";
-  margin-top: 10px;
+  margin-top: 7px;
   float: left;
 }
 .nav_paginator {
@@ -1360,9 +1371,9 @@ select option {
   content: "";
   position: absolute;
   left: 0;
-  top: 5px;
-  height: 7px;
-  width: 7px;
+  top: 2px;
+  height: 10px;
+  width: 10px;
   background: url("../img/true_info.png") no-repeat;
 }
 .false_info {
@@ -1374,10 +1385,10 @@ select option {
   content: "";
   position: absolute;
   left: 0;
-  top: 5px;
-  height: 7px;
-  width: 1px;
-  background-color: #dc3434;
+  top: 2px;
+  height: 10px;
+  width: 10px;
+  background: url("../img/otsut.png") no-repeat;
 }
 .modal-dialog.modal_close_doc {
   width: 286px;
@@ -1419,7 +1430,7 @@ select option {
   margin-left: 15px;
   width: 98.6%;
   height: 110px !important;
-  margin-top: 35px;
+  margin-top: 15px;
   resize: none;
 }
 span.zayav_prosrok {
@@ -1778,11 +1789,13 @@ tr.alarm_row td span .btn_del_zap {
 }
 .close_file_ico {
   display: none;
-  height: 30px;
-  width: 30px;
+  height: 10px;
+  width: 7px;
   position: absolute;
-  right: -8px;
-  top: -6px;
+  right: -15px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
 .close_file_ico:after {
   content: "";
@@ -1816,17 +1829,18 @@ th[scope="row"] {
   font-weight: normal;
 }
 input[type=radio]:not(old) {
-  width: 18px;
-  height: 18px!important;
+  width: 29px;
+  height: 24px!important;
   margin: 0;
   padding: 0;
   opacity: 0;
   cursor: pointer;
+  position: absolute;
 }
 input[type=radio]:not(old) + label {
   display: inline-block;
-  margin-left: -20px;
-  padding-left: 29px;
+  margin-left: -1px;
+  padding-left: 30px;
   margin-top: 3px;
   margin-bottom: -1px;
   background: url('../img/radio.png') no-repeat;
@@ -1836,4 +1850,11 @@ input[type=radio]:not(old) + label {
 }
 input[type=radio]:not(old):checked + label {
   background-position: 8px -16px;
+}
+.table_slider tbody tr td span {
+  padding-top: 10px;
+}
+.center_modal_calend {
+  width: 320px;
+  margin: 0 auto;
 }
