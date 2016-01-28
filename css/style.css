@@ -516,9 +516,59 @@ p.ps1 {
   margin: 3px 8px 3px 0;
   background-size: cover;
 }
+.custom_select {
+  float: left;
+  position: relative;
+}
+.custom_select select {
+  padding: 8px!important;
+  text-align: left;
+  border: 1px solid #AAAAAA!important;
+  -webkit-appearance: none;
+  background-position: right center;
+  background-repeat: no-repeat;
+  line-height: 1em;
+  /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none!important;
+}
+.custom_select:after {
+  background-image: url('../img/select_arrow.png');
+  content: "";
+  height: 6px;
+  width: 8px;
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  /* z-index: 11; */
+  margin: auto 0;
+}
 .status_variant {
+  padding: 8px!important;
+  text-align: left;
   margin-left: 50px;
   margin-right: 10px;
+  height: 26px;
+  -webkit-appearance: none;
+  background-position: right center;
+  background-repeat: no-repeat;
+  line-height: 1em;
+  /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none!important;
+  border: 1px solid #8FA5BC!important;
+}
+.status_variant::-ms-expand {
+  display: none;
 }
 .right_bl_info {
   padding: 8px 15px;
@@ -610,7 +660,6 @@ p.ps1 {
   text-decoration: none !important;
 }
 .table_plans tbody tr td:nth-child(2) span {
-  text-align: left;
   float: left;
 }
 .table_plans {
@@ -629,12 +678,13 @@ p.ps1 {
   padding: 7px;
 }
 .table_plans thead th {
-  color: #BBC2CA;
+  color: #D9E4ED;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-style: oblique;
   text-align: center;
-  line-height: 16px;
+  line-height: 14px;
+  padding-bottom: 5px;
 }
 .table_plans tbody tr {
   margin: 3px 0;
@@ -658,7 +708,7 @@ p.ps1 {
   margin: auto 0;
 }
 .table_plans tbody td {
-  text-align: left;
+  text-align: center;
 }
 .table_plans tbody td span {
   width: 100%;
@@ -693,12 +743,18 @@ p.ps1 {
   display: inline-block;
   margin: 1px 2px 9px;
 }
+.last_row_centr tbody tr td:last-child span {
+  text-align: center ;
+}
 .btn_del_zap {
   width: 12px;
   height: 12px;
   background: url("../img/delete.png") no-repeat 100% 0;
   display: inline-block;
   margin: 1px 2px 9px;
+}
+.modal-body {
+  padding: 15px 15px 0;
 }
 .modal_scroll .modal-body {
   height: 410px;
@@ -915,8 +971,10 @@ select.add_project {
   font-size: 9px;
 }
 .bl_diagramm img {
-  width: 100%;
-  background-color: #ffffff;
+  width: 618px;
+  height: 265px;
+  margin-left: -1px;
+  margin-bottom: -8px;
 }
 .bl_diagramm .key_ico {
   float: right;
@@ -1024,11 +1082,11 @@ input.mac-style {
   background: -webkit-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   background: -ms-linear-gradient(top, #cee3f8 50%, #b0cae5 100%);
   border: 1px solid #a3b3bf;
-  padding-left: 35px;
+  padding-left: 30px;
   float: left;
   margin: 0;
   height: 100%;
-  margin-left: 6px;
+  margin-left: 2px;
   font-size: 12px;
   font-style: italic;
 }
@@ -1227,7 +1285,6 @@ select option {
 }
 .number_tablet tbody tr:before {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
   color: #64788f;
   font-size: 12px;
   counter-increment: list;
@@ -1288,7 +1345,7 @@ select option {
 }
 .cifr_procent {
   font-size: 11px;
-  color: #03D603;
+  color: #657990;
   margin-left: 10px;
   float: left;
 }
@@ -1402,10 +1459,13 @@ tr.alarm_row td span .btn_del_zap {
   counter-increment: schetchik;
 }
 .tables_bar tbody tr:before {
-  width: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #64788f;
+  font-size: 12px;
   content: counter(schetchik);
   display: table-cell;
   vertical-align: middle;
+  width: 12px;
 }
 .bl_title_head_diagr {
   padding: 3px 0 3px 30px;
@@ -1425,7 +1485,7 @@ tr.alarm_row td span .btn_del_zap {
   height: 50px;
 }
 .edit_bl_diagr {
-  background-color: rgba(0, 0, 0, 0.36);
+  background-color: rgba(255, 255, 255, 0.55);
   width: 100%;
   top: 0;
   position: absolute;
@@ -1749,4 +1809,29 @@ tr.alarm_row td span .btn_del_zap {
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+th[scope="row"] {
+  font-weight: normal;
+}
+input[type=radio]:not(old) {
+  width: 18px;
+  height: 18px!important;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+input[type=radio]:not(old) + label {
+  display: inline-block;
+  margin-left: -20px;
+  padding-left: 29px;
+  margin-top: 3px;
+  margin-bottom: -1px;
+  background: url('../img/radio.png') no-repeat;
+  background-position: 8px 1px;
+  width: 17px;
+  height: 17px;
+}
+input[type=radio]:not(old):checked + label {
+  background-position: 8px -16px;
 }

@@ -51,14 +51,16 @@
                 <div class="col-xs-7">
                     <!--<button class="add_project btn_back btn"><i class="ico"></i>Назад</button>-->
                     <button class="add_project  btn" data-toggle="modal" data-target="#myModal"><i class="ico"></i>Добавить заявку</button>
-                    <select class="add_project status_variant btn">
-                        <option>Все статусы</option>
-                        <option>Новая</option>
-                        <option>Обработка</option>
-                        <option>Согласование</option>
-                        <option>В работе</option>
-                        <option>Выполнена</option>
-                    </select>
+                    <div class="custom_select">
+                        <select class="add_project status_variant btn" style="margin-right: 5px">
+                            <option>Все статусы</option>
+                            <option>Новая</option>
+                            <option>Обработка</option>
+                            <option>Согласование</option>
+                            <option>В работе</option>
+                            <option>Выполнена</option>
+                        </select>
+                    </div>
                     <div class="search_bl_input">
                         <input type="text" class="form-control mac-style" name="Search" id='nav-search' placeholder="Найти">
                     </div>
@@ -1176,6 +1178,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <input class="form-control" placeholder="Наименование заявки" style="width: 100%;margin: 0 auto">
+                        <div class="custom_select" style="width: 100%">
                         <select class="select_zayav" id="AddRequest_selectFirm">
                             <option disabled selected class="placeholder" value="">Заказчик</option>
                             <!--<option value="0">Спецпроектмонтаж</option>-->
@@ -1190,6 +1193,7 @@
                             <option value="9">Татстрой</option>
                             <option value="10">Татстройинвест</option>
                         </select>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -1202,6 +1206,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
+                        <div class="custom_select" style="width: 100%">
                         <select class="select_zayav">
                             <option value="" disabled selected class="placeholder">Проект/план</option>
                             <option>Проект № 34511-1 МКД 7.2/Утвержденный план январь 2016</option>
@@ -1231,6 +1236,7 @@
                             <option>Проект № 34513-1 АГЗС19/Утвержденный план март 2015</option>
                             <option>Проект № 34513-1 АГЗС20/Утвержденный план февраль 2015</option>
                         </select>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1264,7 +1270,8 @@
                     <tbody>
                      <tr>
                          <td class="validate" style="width: 446px;">
-                            <select style="width: 100%;" id="t1">
+                             <div class="custom_select" style="width: 100%">
+                             <select style="width: 100%;" id="t1">
                                 <!--<option value="1">м3</option>-->
                                 <!--<option value="2">комплект</option>-->
                                 <!--<option value="3">шт</option>-->
@@ -1411,12 +1418,10 @@
                                 <option>Утеплитель межвенцовый</option>
                                 <option>Брус оцилиндрованный</option>
                                 <option>Щебень фракции 10 - 20 мм</option>
-                                <option>Портландцемент общестроительного и специального назначения марки 400</option>
                                 <option>Гравий для строительных работ</option>
                                 <option>Песок для строительных работ природный</option>
                                 <option>Провод БЭТ-85М</option>
                                 <option>Металл листовой 10 мм</option>
-                                <option>Пластиковые ограничители на арматуру обеспечивающие достаточный защитный слой бетона</option>
                                 <option>Проволока вязальная 3 мм</option>
                                 <option>Арматура класса А-III Ф 12 мм</option>
                                 <option>Бетон марка 100</option>
@@ -1475,7 +1480,6 @@
                                 <option>Элемент из набора для санузла</option>
                                 <option>Электророзетка для кухонной плиты</option>
                                 <option>Электророзетка</option>
-                                <option>Шпильки оцинкованные стяжные диаметром 16 мм длиной 600 мм</option>
                                 <option>Шпатлёвочный состав</option>
                                 <option>Шпатлевка Унифлот (25кг)</option>
                                 <option>Шпатлевка по дереву</option>
@@ -1518,13 +1522,6 @@
                                 <option>Сталь угловая 63х63 мм</option>
                                 <option>Соединительные элементы канализации Ф 50 мм</option>
                                 <option>Соединительные элементы канализации Ф 110 мм</option>
-                                <option>Соединительные элементы воздуховода пластикового 100х50 мм</option>
-                                <option>Соединительные узлы для полипропиленовых труб 32 мм (дюймовая)</option>
-                                <option>Соединительные узлы для полипропиленовых труб 20 мм (3/4 дюйма)</option>
-                                <option>Соединительные узлы для полипропиленовых труб 15 мм (1/2 дюйма)</option>
-                                <option>Соединительные узлы для металлопластиковых труб 32 мм (дюймовая)</option>
-                                <option>Соединительные узлы для металлопластиковых труб 20 мм (3/4 дюйма)</option>
-                                <option>Соединительные узлы для металлопластиковых труб 15 мм (1/2 дюйма)</option>
                                 <option>Соединитель изолированный завинчивающийся - СИЗ</option>
                                 <option>Смесь растворная сухая штукатурная</option>
                                 <option>Смесь растворная сухая для полов</option>
@@ -1565,7 +1562,6 @@
                                 <option>Раковина</option>
                                 <option>Радиатор отопления</option>
                                 <option>Профиль угловой обрамляющий ПВХ для оконных откосов 3 м</option>
-                                <option>Профиль угловой для защиты наружного угла гипсокартонного листа</option>
                                 <option>Профиль стоечный 3000х75х50</option>
                                 <option>Профиль стартовый ПВХ для оконных откосов 3 м</option>
                                 <option>Профиль потолочный 3000х60х27</option>
@@ -1624,7 +1620,6 @@
                                 <option>Наличники на двери из МДФ</option>
                                 <option>Нагревающие провода для тёплого пола</option>
                                 <option>Нагревательные маты для тёплого пола.</option>
-                                <option>Монтажная металлическая лента для крепления нагревающих проводов тёплого пола</option>
                                 <option>Монтажная коробка</option>
                                 <option>Мешок для строительного мусора</option>
                                 <option>Металлическая лента лоскутовая (830 шт)</option>
@@ -1757,12 +1752,9 @@
                                 <option>Ветошь</option>
                                 <option>Профиль металлический направляющий ПН-4</option>
                                 <option>Сайдинг стальной с полимерным покрытием</option>
-                                <option>Пленка пароизоляционная ЮТАФОЛ (3-х слойная полиэтиленовая с армированным слоем из полиэтиленовых полос)</option>
                                 <option>Лента полиэтиленовая с липким слоем А50</option>
                                 <option>Лист гладкий стальной оцинкованный с покрытием "Полиэстер"</option>
-                                <option>Кронштейн выравнивающий стальной оцинкованный, высотой профиля (h) 200 мм, толщиной металла (t) 1,2 мм</option>
                                 <option>Начальная планка из оцинкованной стали с полимерным покрытием</option>
-                                <option>Угол наружный, внутренний из оцинкованной стали с полимерным покрытием</option>
                                 <option>Нащельник стальной оцинкованный с покрытием "Полиэстер"</option>
                                 <option>Дюбель-гвоздь 8х100 мм</option>
                                 <option>Шурупы-саморезы 4,2х16 мм</option>
@@ -1784,13 +1776,15 @@
                                 <option>Щебень фракции 20 - 40 мм</option>
                                 <option>Брус 100х100 мм</option>
                             </select>
+                                 </div>
                              <div class="error_message"></div>
 
                          </td>
                         <td class="validate">
                             <input class="form-control" placeholder="Кол-во" style="    float: left;  width: 40%;  margin: 0 2px;" id="t2">
                             <div class="error_message"></div>
-                            <select style=" width: 57%; float: left;" id="t3">
+                            <div class="custom_select" style="width: 55%">
+                            <select style=" width: 100%; float: left;" id="t3">
                                 <option value="" disabled selected class="placeholder">Ед. изм</option>
                                 <option value="1">м3</option>
                                 <option value="2">комплект</option>
@@ -1806,6 +1800,7 @@
                                 <option value="12">пог. м</option>
                                 <option value="13">м. п.</option>
                             </select>
+                                </div>
                             <div class="error_message"></div>
 
                         </td>

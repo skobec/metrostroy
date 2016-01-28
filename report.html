@@ -90,7 +90,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <img data-img-id="1" src="img/graf/gr01.svg" width="598" height="260" alt="">
+                                <img data-img-id="1" src="img/graf/report_img-1-1.svg" alt="">
                             </div>
                         </div>
                         <div class="edit_bl_diagr">
@@ -171,7 +171,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <img  data-img-id="2" src="img/graf/gr02.svg" width="598" height="260" alt="">
+                                <img  data-img-id="2" src="img/graf/report_img-1-2.svg"  alt="">
                             </div>
                         </div>
                         <div class="edit_bl_diagr">
@@ -250,7 +250,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <img  data-img-id="3" src="img/report_img-3-1.png" width="598" height="260"  alt="">
+                                <img  data-img-id="3" src="img/report_img-3-1.png"  alt="">
                             </div>
                         </div>
                         <div class="edit_bl_diagr">
@@ -531,7 +531,7 @@
 <div class="modal modal_project fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
     <div class="vertical-alignment-helper">
                 <div class="modal-dialog vertical-align-center">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog lite_modal" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -540,9 +540,11 @@
                 <h4 class="modal-title" id="myModalLabel2">Добавить рабочий стол</h4>
             </div>
             <div class="modal-body">
-                <div class="col-xs-12">
-                    <input class="form-control" placeholder="Наименование рабочего стола"
-                           style="width: 70%;margin: 0 auto 10px">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input class="form-control" placeholder="Наименование рабочего стола"
+                               style="width: 100%;margin: 0 auto">
+                    </div>
                 </div>
             </div>
             <div class="modal-footer text-center">
@@ -794,7 +796,7 @@
                 $parent.find('.date_to_bl_diagr').html(date_to);
 
                 if(idTitle != '4' && title){
-                    $img.attr('src', 'img/report_img-' + imgId + '-' + idTitle + '.png');
+                    $img.attr('src', 'img/graf/report_img-' + imgId + '-' + idTitle + '.svg');
                 }
                 $(this).parents('.edit_bl_diagr').fadeToggle(300);
 
