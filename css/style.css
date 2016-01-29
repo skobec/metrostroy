@@ -833,6 +833,12 @@ select.add_project {
   margin-top: 5px;
   margin-right: 6px;
 }
+.inline_calendar {
+  margin: 0;
+}
+.inline_calendar span {
+  margin-top: 0;
+}
 .form-control {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
