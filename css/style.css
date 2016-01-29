@@ -1485,6 +1485,10 @@ tr.alarm_row td span .btn_del_zap {
   display: table-cell;
   vertical-align: middle;
   width: 12px;
+  position: absolute;
+  left: -15px;
+  /* top: 6px; */
+  margin-top: 6px;
 }
 .bl_title_head_diagr {
   padding: 3px 0 3px 30px;
@@ -1796,9 +1800,9 @@ tr.alarm_row td span .btn_del_zap {
 .close_file_ico {
   display: none;
   height: 10px;
-  width: 7px;
+  width: 27px;
   position: absolute;
-  right: -15px;
+  right: -16px;
   top: 0;
   bottom: 0;
   margin: auto 0;
@@ -1809,7 +1813,7 @@ tr.alarm_row td span .btn_del_zap {
   background-color: #000000;
   height: 7px;
   position: absolute;
-  right: 0;
+  right: 6px;
   top: 0;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -1823,7 +1827,7 @@ tr.alarm_row td span .btn_del_zap {
   background-color: #000000;
   height: 7px;
   position: absolute;
-  right: 0;
+  right: 6px;
   top: 0;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
