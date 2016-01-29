@@ -904,7 +904,7 @@ select.add_project {
 .add_zayav .ico {
   background: url("../img/ok.png") no-repeat;
   height: 12px;
-  width: 11px;
+  width: 12px;
   display: inline-block;
   float: left;
   background-position: 100% 0;
@@ -1863,4 +1863,7 @@ input[type=radio]:not(old):checked + label {
 .center_modal_calend {
   width: 320px;
   margin: 0 auto;
+}
+.centr_paginator {
+  margin-top: 4px;
 }
