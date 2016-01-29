@@ -16,7 +16,8 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body id="page_2">
+
 <div class="header">
     <div class="container">
         <div class="row head_titl_bl">
@@ -1163,6 +1164,32 @@
     </div>
 </div>
 <!-- Modal -->
+
+<div class="modal modal_project fade" id="myModal77" tabindex="-1" role="dialog"  style="z-index: 10000">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-dialog authority_modal" role="document">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="">Уведомление</h4>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <p>Внимание! Выбранная запись будет удалена!</p>
+                    </div>
+                    <div class="modal-footer" style="padding: 20px 15px 20px">
+                        <div class="text-center">
+                            <button  id="btnYes" class="btn add_zayav">Продолжить<i class="ico"></i></button>
+                            <a href="#" data-dismiss="modal" aria-hidden="true" class="btn clear_btn"><i class="ico"></i>Отмена</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+
 <div class="modal modal_project fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="vertical-alignment-helper">
                 <div class="modal-dialog vertical-align-center">
@@ -1876,6 +1903,26 @@
 <script src="js/tables_edit.js"></script>
 <script>
     $(document).ready(function() {
+        $('#table_add_plans').on('click','a.btn_del_zap', function() {
+            var row = ($(this).data('row'));
+            //$.data('#btnYes','row-id',5);
+            //e.preventDefault();
+
+            //var id = $(this).data('id');
+            //$('#myModal77').data('id', id).modal('show');
+            $('#myModal77').modal('show');
+            $('#btnYes').data('row',row);
+            return false;
+        });
+        $('#btnYes').click(function() {
+            // handle deletion here
+            //var id = $('#myModal19').data('id');
+            //$('[data-id='+id+']').remove();
+            var row = ($(this).data('row'));
+            $('#page_2 table tbody').find('.btn_del_zap[data-row='+row+']').closest('tr').remove();
+            row==2 ? $('.alarm_limit').css('display', 'none'):row==1?$('#limit-row').text('1'):false;
+            $('#myModal77').modal('hide');
+        });
 //        $('.add_btn').click(function () {
 //            if ($('#t1 option:selected').val() !== "") {
 //                var row = $('#table_add_plans');
